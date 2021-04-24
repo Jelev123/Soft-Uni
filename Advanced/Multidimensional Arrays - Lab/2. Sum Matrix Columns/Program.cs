@@ -7,38 +7,40 @@ namespace _2._Sum_Matrix_Columns
     {
         static void Main(string[] args)
         {
-
             var sized = Console.ReadLine()
-                .Split(",")
+                .Split(", ")
                 .Select(int.Parse)
                 .ToArray();
 
             var rows = sized[0];
             var cols = sized[1];
+
             var matrix = new int[rows, cols];
 
             for (int row = 0; row < rows; row++)
             {
-                var col = Console.ReadLine()
+                var currnetCol = Console.ReadLine()
                     .Split()
                     .Select(int.Parse)
                     .ToArray();
-                for (int c = 0; c < cols; c++)
+
+                for (int col = 0; col < cols; col++)
                 {
-                    matrix[row, c] = col[c];
+                    matrix[row, col] = currnetCol[col];
                 }
             }
 
-            for (int col = 0; col < cols; col++)
+            for (int c = 0; c < cols; c++)
             {
                 int sum = 0;
-                for (int row = 0; row < rows; row++)
+                for (int r = 0; r < rows; r++)
                 {
-                    sum += matrix[row, col];
+                    sum += matrix[r,c];
                 }
 
                 Console.WriteLine(sum);
             }
+
         }
     }
 }
