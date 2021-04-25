@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3. Primary Diagonal", "3. P
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4. Symbol in Matrix", "4. Symbol in Matrix\4. Symbol in Matrix.csproj", "{FDD37884-8B45-4A67-A47F-FAD87E8BC58F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6. Jagged-Array Modification", "6. Jagged-Array Modification\6. Jagged-Array Modification.csproj", "{639778D9-45CB-45C1-897E-3F1237285D8F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{FDD37884-8B45-4A67-A47F-FAD87E8BC58F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FDD37884-8B45-4A67-A47F-FAD87E8BC58F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FDD37884-8B45-4A67-A47F-FAD87E8BC58F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{639778D9-45CB-45C1-897E-3F1237285D8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{639778D9-45CB-45C1-897E-3F1237285D8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{639778D9-45CB-45C1-897E-3F1237285D8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{639778D9-45CB-45C1-897E-3F1237285D8F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
