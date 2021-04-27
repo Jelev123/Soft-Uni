@@ -13,11 +13,11 @@ namespace _4._Matrix_Shuffling
             int cols = rowsAndCols[1];
             string[,] arr = new string[rows, cols];
 
-            for (int row = 0; row < rows; row++)
+            for (int row = 0; row < arr.GetLength(0); row++)
             {
                 string[] lines = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries).ToArray();
 
-                for (int col = 0; col < cols; col++)
+                for (int col = 0; col < arr.GetLength(1); col++)
                 {
                     arr[row, col] = lines[col];
                 }
