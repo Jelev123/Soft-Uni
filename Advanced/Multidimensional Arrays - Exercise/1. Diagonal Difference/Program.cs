@@ -9,34 +9,30 @@ namespace _1._Diagonal_Difference
         {
             int n = int.Parse(Console.ReadLine());
 
-            var jaged = new int[n][];
+            long[][] matrix = new long[n][];
 
             for (int i = 0; i < n; i++)
             {
-
-                jaged[i] = Console.ReadLine().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
-                    .Select(int.Parse)
-                    .ToArray();
+                matrix[i] = Console.ReadLine().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).Select(long.Parse).ToArray();
             }
 
-            int firstDiagonal = 0;
+            //Primary diagonal:
+            long primarySum = 0;
 
             for (int row = 0; row < n; row++)
             {
-                firstDiagonal += jaged[row][row];
-                
+                primarySum += matrix[row][row];
             }
 
-            int secondDiagonal = 0;
+            //Secondary diagonal:
+            long secondarySum = 0;
 
-           
-
-            for (int row = 0,col=n-1; row < n; row++,col--)
+            for (int row = 0, col = n - 1; row < n; row++, col--)
             {
-                secondDiagonal += jaged[row][col];
+                secondarySum += matrix[row][col];
             }
 
-            Console.WriteLine(secondDiagonal-firstDiagonal);
+            Console.WriteLine(Math.Abs(primarySum - secondarySum));
         }
     }
 }
