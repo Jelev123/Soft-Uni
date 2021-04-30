@@ -8,12 +8,12 @@ namespace _6._Jagged_Array_Manipulator
         static void Main(string[] args)
         {
             int n = int.Parse(Console.ReadLine());
-            var jagged = new int[n][];
+            var jagged = new double[n][];
 
             for (int i = 0; i < n; i++)
             {
                 jagged[i] = Console.ReadLine().Split()
-                    .Select(int.Parse)
+                    .Select(double.Parse)
                     .ToArray();
             }
 
@@ -23,7 +23,7 @@ namespace _6._Jagged_Array_Manipulator
 
         }
 
-        private static void Analyze(int[][] jagged)
+        private static void Analyze(double[][] jagged)
         {
             for (int row = 0; row < jagged.Length-1; row++)
             {
@@ -50,7 +50,7 @@ namespace _6._Jagged_Array_Manipulator
             }
         }
 
-        private static void Cheked(int[][] jagged)
+        private static void Cheked(double[][] jagged)
         {
             string input = Console.ReadLine();
 
