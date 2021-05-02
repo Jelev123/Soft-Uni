@@ -41,13 +41,14 @@ namespace _3._Maximal_Sum
                 }
             }
 
+            Console.WriteLine($"Sum = {maxSum}");
+
             for (int row = targetRow; row <= targetRow + 2; row++)
             {
                 for (int col = targetCol; col <= targetCol + 2; col++)
                 {
                     Console.Write(matrix[row, col] + " ");
                 }
-
                 Console.WriteLine();
             }
         }
