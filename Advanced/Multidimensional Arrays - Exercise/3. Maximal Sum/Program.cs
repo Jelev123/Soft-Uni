@@ -15,38 +15,11 @@ namespace _3._Maximal_Sum
             var matrix = new int[rows, cols];
 
             InitializeMatrix(matrix);
-            int maxNum = int.MinValue;
-            int targetRow = 0;
-            int targetCol = 0;
+          
 
-            for (int row = 0; row < matrix.GetLength(0) - 2; row++)
-            {
-                for (int col = 0; col < matrix.GetLength(1) - 2; col++)
-                {
-                    int curentSum = matrix[row, col] + matrix[row, col + 1]
-                                                     + matrix[row, col + 2] + matrix[row + 1, col] +
-                                                     matrix[row + 2, col] + matrix[row + 2, col + 1] +
-                                                     matrix[row + 2, col + 2]+matrix[row+1,col+1]+matrix[row+1,col+2];
+           
 
-                    if (curentSum > maxNum)
-                    {
-                        maxNum = curentSum;
-                        targetRow = row;
-                        targetCol = col;
-                    }
-                }
-            }
-
-            Console.WriteLine($"Sum = {maxNum}");
-            for (int row = targetRow; row <= targetRow + 2; row++)
-            {
-                for (int col = targetCol; col  <= targetCol + 2; col++)
-                {
-                    Console.Write(matrix[row,col] + " ");
-                }
-                Console.WriteLine();
-
-            }
+            
 
         }
 
