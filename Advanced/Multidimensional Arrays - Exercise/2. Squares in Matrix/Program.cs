@@ -32,6 +32,8 @@ namespace _2._Squares_in_Matrix
             }
 
             Console.WriteLine(counter);
+            Console.WriteLine();
+            
 
         }
 
