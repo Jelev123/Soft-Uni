@@ -21,7 +21,7 @@ namespace _02._Average_Student_Grades
 
                 if (!student.ContainsKey(name))
                 {
-                    student[name] = new List<double>();
+                    student.Add(name, new List<double>());
                 }
 
                 student[name].Add(grade);
@@ -34,6 +34,7 @@ namespace _02._Average_Student_Grades
                 var studentGrade = kvp.Value;
                 var average = studentGrade.Average();
                 Console.Write($"{name} ->");
+
                 foreach (var grade in studentGrade)
                 {
                     Console.Write($"{grade:f2} ");
