@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.InteropServices;
 
 namespace _03._Product_Shop
 {
@@ -8,10 +10,11 @@ namespace _03._Product_Shop
         static void Main(string[] args)
         {
             var shops = new Dictionary<string, Dictionary<string, double>>();
+            string line;
 
-            for (int i = 0; i < shops.Count; i++)
+            while ((line=Console.ReadLine()) != "Revision")
             {
-                string[] info = Console.ReadLine().Split();
+                string[] info = line.Split(", ");
 
                 string shopName = info[0];
                 string product = info[1];
@@ -19,14 +22,20 @@ namespace _03._Product_Shop
 
                 if (!shops.ContainsKey(shopName))
                 {
-                    shops.Add(shopName,new Dictionary<string, double>());
+                    shops.Add(shopName, new Dictionary<string, double>());
                 }
+
                 shops[shopName].Add(product,price);
             }
 
-            foreach (var kvp in shops)
+            foreach (var shop in shops.OrderBy(s=>s.Key))
             {
-                Console.WriteLine($"{kvp.Key}->");
+                Console.WriteLine($"{shop.Key}->");
+
+                foreach (var product in shop.Value)
+                {
+                    Console.WriteLine($"Product: {product.Key}, Price: {product.Value}");
+                }
             }
         }
     }
