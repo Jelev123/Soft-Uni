@@ -17,7 +17,7 @@ namespace _06._Parking_Lot
 
                 string direction = cars[0];
                 string numberPlates = cars[1];
-
+                
                 if (direction == "IN")
                 {
                     parking.Add(numberPlates);
@@ -30,6 +30,8 @@ namespace _06._Parking_Lot
 
                 input = Console.ReadLine();
             }
+
+            Console.WriteLine("Parking Lot is Empty");
 
             foreach (var cars in parking)
             {
