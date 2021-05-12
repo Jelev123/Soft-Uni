@@ -26,8 +26,7 @@ namespace _02._Sets_of_Elements
                 var input = int.Parse(Console.ReadLine());
                 mSet.Add(input);
             }
-
-            nSet.SetEquals(mSet);
+            nSet.IntersectWith(mSet);
 
             Console.WriteLine(string.Join(" ",nSet));
         }
