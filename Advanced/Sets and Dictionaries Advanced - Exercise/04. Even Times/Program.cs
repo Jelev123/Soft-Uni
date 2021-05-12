@@ -15,7 +15,7 @@ namespace _04._Even_Times
             {
                 int input = int.Parse(Console.ReadLine());
 
-                if (input % 2 == 0 || input % 2 != 0)
+                if (input % 2 == 0 )
                 {
                     set.Add(input);
                 }
