@@ -31,7 +31,6 @@ namespace _06._Parking_Lot
                 input = Console.ReadLine();
             }
 
-            Console.WriteLine("Parking Lot is Empty");
 
             foreach (var cars in parking)
             {
