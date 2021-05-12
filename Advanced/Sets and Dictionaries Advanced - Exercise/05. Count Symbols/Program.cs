@@ -19,7 +19,7 @@ namespace _05._Count_Symbols
                     text.Add(input[i],0);
                 }
 
-                
+                text[input[i]]++;
             }
 
 
