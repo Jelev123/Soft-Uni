@@ -10,7 +10,7 @@ namespace _03._Periodic_Table
         {
             int n = int.Parse(Console.ReadLine());
 
-            var set = new SortedSet<string>();
+            var set = new HashSet<string>();
 
             for (int i = 0; i < n; i++)
             {
@@ -23,7 +23,7 @@ namespace _03._Periodic_Table
                 
             }
 
-            foreach (var elemets in set)
+            foreach (var elemets in set.OrderBy(x=>x))
             {
                 Console.Write($"{elemets + " "}");
             }
