@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel.Design;
 using System.Linq;
+using System.Numerics;
 
 namespace _6._Jagged_Array_Manipulator
 {
@@ -8,92 +9,54 @@ namespace _6._Jagged_Array_Manipulator
     {
         static void Main(string[] args)
         {
+            var n = Console.ReadLine().Split()
+                .Select(int.Parse)
+                .ToArray();
+            var rows = n[0];
+            var cols = n[1];
 
-            int n = int.Parse(Console.ReadLine());
+            var matrix = new char[rows, cols];
 
-            var jagged = new double[n][];
+            InitializeMatrix(matrix);
+            int counter = 0;
 
-            for (int i = 0; i < n; i++)
+            for (int row = 0; row < matrix.GetLength(0)-1; row++)
             {
-                jagged[i] = Console.ReadLine().Split()
-                    .Select(double.Parse)
+                for (int col = 0; col < matrix.GetLength(1)-1; col++)
+                {
+                    if (row >= 0 && row < matrix.Length && col >= 0 && col < matrix.Length)
+                    {
+                        if (matrix[row , col] == matrix[row + 1 ,col] &&
+                            matrix[row,col] == matrix[row,col+1] && 
+                            matrix[row,col] == matrix[row +1,col+1])
+                        {
+                            counter++;
+                        }
+                    }
+                }
+            }
+
+            Console.WriteLine(counter);
+            
+        }
+
+        private static void InitializeMatrix(char[,] matrix)
+        {
+            for (int i = 0; i < matrix.GetLength(0); i++)
+            {
+                char[] input = Console.ReadLine()
+                    .Split()
+                    .Select(char.Parse)
                     .ToArray();
-            }
 
-            Checked(jagged);
-            Command(jagged);
-
-
-        }
-
-        private static void Command(double[][] jagged)
-        {
-            string input = Console.ReadLine();
-
-            while (input != "End")
-            {
-                string[] splited = input.Split();
-
-                string command = splited[0];
-                int row = int.Parse(splited[1]);
-                int col = int.Parse(splited[2]);
-                int value = int.Parse(splited[3]);
-
-
-
-                if (row >= 0 && row < jagged.Length && col >= 0 && col < jagged[row].Length)
+                for (int j = 0; j < matrix.GetLength(1); j++)
                 {
-                    if (command == "Add")
-                    {
-                        jagged[row][col] += value;
-                    }
-                    else
-                    {
-                        jagged[row][col] -= value;
-                    }
-
-                }
-
-
-                input = Console.ReadLine();
-            }
-
-            foreach (var i in jagged)
-            {
-                Console.WriteLine(string.Join(" ", i));
-            }
-        }
-
-        private static void Checked(double[][] jagged)
-        {
-            for (int row = 0; row < jagged.Length - 1; row++)
-            {
-                if (jagged[row].Length == jagged[row + 1].Length)
-                {
-                    for (int col = 0; col < jagged[row].Length; col++)
-                    {
-                        jagged[row][col] *= 2;
-                        jagged[row + 1][col] *= 2;
-                    }
-                }
-                else
-                {
-                    for (int col = 0; col < jagged[row].Length; col++)
-                    {
-                        jagged[row][col] /= 2;
-                    }
-
-                    for (int col = 0; col < jagged[row + 1].Length; col++)
-                    {
-                        jagged[row + 1][col] /= 2;
-                    }
-
-
+                    matrix[i, j] = input[j];
                 }
             }
-
         }
     }
 }
+
 
 
