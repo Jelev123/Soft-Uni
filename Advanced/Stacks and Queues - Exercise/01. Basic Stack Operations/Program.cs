@@ -8,8 +8,32 @@ namespace _01._Basic_Stack_Operations
     {
         static void Main(string[] args)
         {
-            
 
+            int[] element = Console.ReadLine().Split().Select(int.Parse).ToArray();
+            int[] numbers = Console.ReadLine().Split().Select(int.Parse).ToArray();
+            var stack = new Stack<int>(numbers);
+
+            int s = element[1];
+
+            for (int i = 0; i < s; i++)
+            {
+                stack.Pop();
+            }
+
+            int x = element[2];
+
+            if (stack.Contains(x))
+            {
+                Console.WriteLine("true");
+            }
+            else if (stack.Count > 0)
+            {
+                Console.WriteLine(stack.Min());
+            }
+            else
+            {
+                Console.WriteLine(0);
+            }
         }
     }
 }
