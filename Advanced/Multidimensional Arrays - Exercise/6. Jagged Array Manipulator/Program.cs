@@ -50,7 +50,7 @@ namespace _6._Jagged_Array_Manipulator
                 }
             }
 
-            Console.WriteLine(sum);
+            Console.WriteLine($"Sum = {sum}");
 
             for (int row = targetRow; row <= targetRow +2; row++)
             {
