@@ -9,49 +9,71 @@ namespace _6._Jagged_Array_Manipulator
     {
         static void Main(string[] args)
         {
-            var n = Console.ReadLine().Split()
+
+            int[] dimension = Console.ReadLine()
+                .Split(" ", StringSplitOptions.RemoveEmptyEntries)
                 .Select(int.Parse)
                 .ToArray();
-            var rows = n[0];
-            var cols = n[1];
 
-            var matrix = new char[rows, cols];
+            var matrix = new int[dimension[0], dimension[1]];
 
             InitializeMatrix(matrix);
-            int counter = 0;
 
-            for (int row = 0; row < matrix.GetLength(0)-1; row++)
+            int sum = int.MinValue;
+            int targetRow = 0;
+            int targetCol = 0;
+
+            for (int row = 0; row < matrix.GetLength(0)-2; row++)
             {
-                for (int col = 0; col < matrix.GetLength(1)-1; col++)
+                for (int col = 0; col < matrix.GetLength(1)-2; col++)
                 {
                     if (row >= 0 && row < matrix.Length && col >= 0 && col < matrix.Length)
                     {
-                        if (matrix[row , col] == matrix[row + 1 ,col] &&
-                            matrix[row,col] == matrix[row,col+1] && 
-                            matrix[row,col] == matrix[row +1,col+1])
+                        int currentSum= (matrix[row, col] + matrix[row + 1, col] +
+                                        matrix[row + 2, col] +
+                                        matrix[row, col + 1] +
+                                        + matrix[row, col + 2] +
+                                        matrix[row + 1, col + 1] + 
+                                       matrix[row + 2, col + 1]  +
+                                        matrix[row + 2, col + 2]  +
+                                        matrix[row + 1, col + 2]);
+
+                        if (currentSum > sum)
                         {
-                            counter++;
+                            sum = currentSum;
+                             targetRow = row;
+                             targetCol = col;
                         }
+
+
                     }
                 }
             }
 
-            Console.WriteLine(counter);
-            
+            Console.WriteLine(sum);
+
+            for (int row = targetRow; row <= targetRow +2; row++)
+            {
+                for (int col = targetCol; col <= targetCol+2; col++)
+                {
+                    Console.Write(matrix[row, col] + " ");
+                }
+
+                Console.WriteLine();
+            }
         }
 
-        private static void InitializeMatrix(char[,] matrix)
+        private static void InitializeMatrix(int[,] matrix)
         {
-            for (int i = 0; i < matrix.GetLength(0); i++)
+            for (int row = 0; row < matrix.GetLength(0); row++)
             {
-                char[] input = Console.ReadLine()
-                    .Split()
-                    .Select(char.Parse)
+                int[] input = Console.ReadLine()
+                    .Split(" ", StringSplitOptions.RemoveEmptyEntries)
+                    .Select(int.Parse)
                     .ToArray();
-
-                for (int j = 0; j < matrix.GetLength(1); j++)
+                for (int col = 0; col < matrix.GetLength(1); col++)
                 {
-                    matrix[i, j] = input[j];
+                    matrix[row, col] = input[col];
                 }
             }
         }
