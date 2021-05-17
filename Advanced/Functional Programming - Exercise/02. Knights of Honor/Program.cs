@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace _02._Knights_of_Honor
 {
@@ -6,7 +7,14 @@ namespace _02._Knights_of_Honor
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            string[] knights = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries);
+
+            foreach (var knight in knights)
+            {
+                Console.WriteLine($"Sir {knight}");
+            }
+
+
         }
     }
 }
