@@ -9,14 +9,31 @@ namespace _02._Sum_Numbers
         {
             int[] numbers = Console.ReadLine()
                 .Split(", ")
-                .Select(int.Parse)
+                .Select(ParseNumber)
                 .ToArray();
-           
+            PrintResult(numbers,GetCount,GetSum);
+            
+        }
 
-           Console.WriteLine(string.Join(" ",numbers.Length));
-           Console.WriteLine(string.Join(" ", numbers.Sum()));
+        static int GetCount(int[] numbers)
+        {
+            return numbers.Length;
+        }
 
+        static int GetSum(int[] numbers)
+        {
+            return numbers.Sum();
+        }
 
+        static void PrintResult(int[] numbers, Func<int[], int> count, Func<int[], int> sum)
+        {
+            Console.WriteLine(count(numbers));
+            Console.WriteLine(sum(numbers));
+        }
+
+        static int ParseNumber(string number)
+        {
+            return int.Parse(number);
         }
     }
 }
