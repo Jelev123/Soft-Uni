@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Action Print", "01. Action Print\01. Action Print.csproj", "{8A4E503A-8037-4AF7-909F-8259A122B34F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Knights of Honor", "02. Knights of Honor\02. Knights of Honor.csproj", "{E921AF56-93BA-4589-8BE3-C09E3B2FAB89}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8A4E503A-8037-4AF7-909F-8259A122B34F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A4E503A-8037-4AF7-909F-8259A122B34F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A4E503A-8037-4AF7-909F-8259A122B34F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A4E503A-8037-4AF7-909F-8259A122B34F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E921AF56-93BA-4589-8BE3-C09E3B2FAB89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E921AF56-93BA-4589-8BE3-C09E3B2FAB89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E921AF56-93BA-4589-8BE3-C09E3B2FAB89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E921AF56-93BA-4589-8BE3-C09E3B2FAB89}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {91E3A772-1063-4CBC-B0C8-CF527D754AC2}
+	EndGlobalSection
+EndGlobal
