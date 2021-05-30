@@ -9,34 +9,30 @@ namespace Generic_Swap_Method_Integers
         static void Main(string[] args)
         {
             int n = int.Parse(Console.ReadLine());
-            Box<string> box = new Box<string>();
-
-
+            Box<int> box = new Box<int>();
             for (int i = 0; i < n; i++)
             {
-                string lines = Console.ReadLine();
-                box.Add(lines);
-
+                int line = int.Parse(Console.ReadLine());
+                box.Add(line);
             }
 
-            int[] nums = Console.ReadLine()
+            var nums = Console.ReadLine()
                 .Split()
                 .Select(int.Parse)
                 .ToArray();
-            int first = nums[0];
-            int second = nums[1];
-            Swap(box.Names,first,second);
+            var first = nums[0];
+            var second = nums[1];
+            Swap(box.Names, first, second);
 
             Console.WriteLine(box);
-            
 
         }
 
-        static void Swap<T>(List<T> data,int firstIndex,int secondIndex)
+        static void Swap<T>(List<T> listWithData, int firstIndex, int secondIndex)
         {
-            var temp = data[firstIndex];
-            data[firstIndex] = data[secondIndex];
-            data[secondIndex] = temp;
+            var temp = listWithData[firstIndex];
+            listWithData[firstIndex] = listWithData[secondIndex];
+            listWithData[secondIndex] = temp;
         }
     }
     }

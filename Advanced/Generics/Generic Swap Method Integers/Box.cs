@@ -16,27 +16,23 @@ namespace Generic_Swap_Method_Integers
             Names = new List<T>();
         }
 
+        public List<T> Names { get; set; }
+
+
         public void Add(T item)
         {
             Names.Add(item);
         }
 
-        public List<T> Names { get; set; }
-
-        #region Overrides of Object
-
         public override string ToString()
         {
             var sb = new StringBuilder();
-
-            foreach (var item in Names)
+            foreach (var name in Names)
             {
-                sb.AppendLine($"{typeof(T)}: {item}");
+                sb.AppendLine($"{typeof(T)}: {name}");
             }
 
             return sb.ToString();
         }
-
-        #endregion
     }
 }
