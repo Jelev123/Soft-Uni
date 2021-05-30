@@ -1,5 +1,7 @@
 ﻿
 using System;
+using System.Collections.Generic;
+using System.Threading.Channels;
 using GenericBoxOfString;
 
 namespace GenericBoxofString
@@ -12,10 +14,11 @@ namespace GenericBoxofString
 
             for (int i = 0; i < n; i++)
             {
-                string input = Console.ReadLine();
-                Box<string> text = new Box<string>(input);
-                Console.WriteLine(text.ToString());
+                string name = Console.ReadLine();
+                Box<string> input = new Box<string>(name);
+                Console.WriteLine(input.ToString());
             }
+                                      
         }
     }
 }
