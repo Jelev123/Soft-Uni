@@ -8,10 +8,8 @@ namespace _04._Fast_Food
     {
         static void Main(string[] args)
         {
-            int quantity = int.Parse(Console.ReadLine());
-
-            int[] orders = Console.ReadLine().Split().Select(int.Parse).ToArray();
-
+            int quantityOfTheFood = int.Parse(Console.ReadLine());
+            var orders = Console.ReadLine().Split().Select(int.Parse).ToArray();
             var queue = new Queue<int>(orders);
 
             Console.WriteLine(queue.Max());
@@ -19,22 +17,29 @@ namespace _04._Fast_Food
             bool isCompleted = true;
             for (int i = 0; i < orders.Length; i++)
             {
-                if (orders[i] <= quantity)
+                if (quantityOfTheFood > orders[i])
                 {
-                   quantity-= queue.Dequeue();
+                    quantityOfTheFood -= queue.Dequeue();
+                   
+
                 }
                 else
                 {
                     Console.WriteLine($"Orders left: {string.Join(" ",queue)}");
                     isCompleted = false;
                     break;
-                    
+                    ;
+
                 }
+
+                
             }
+
             if (isCompleted)
             {
                 Console.WriteLine("Orders complete");
             }
+
 
         }
     }
