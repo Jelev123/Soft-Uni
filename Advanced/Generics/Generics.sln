@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericBoxOfString", "GenericBoxofString\GenericBoxOfString.csproj", "{400EF058-A905-459C-8BCC-D6B081123974}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericBoxOfString", "GenericBoxofString\GenericBoxOfString.csproj", "{400EF058-A905-459C-8BCC-D6B081123974}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericBoxOfnteger", "Generic Box of Integer\GenericBoxOfnteger.csproj", "{6F51854D-E110-414C-927C-AAA48A69DB8C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericBoxOfnteger", "Generic Box of Integer\GenericBoxOfnteger.csproj", "{6F51854D-E110-414C-927C-AAA48A69DB8C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericSwapMethodStrings", "GenericSwapMethodStrings\GenericSwapMethodStrings.csproj", "{4FF2F6DC-8A31-434D-9F5A-D73BE64AF19F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericSwapMethodStrings", "GenericSwapMethodStrings\GenericSwapMethodStrings.csproj", "{4FF2F6DC-8A31-434D-9F5A-D73BE64AF19F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericSwapMethodIntegers", "Generic Swap Method Integers\GenericSwapMethodIntegers.csproj", "{E1495CA9-2E4C-4E6A-969F-585D146716D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericSwapMethodIntegers", "Generic Swap Method Integers\GenericSwapMethodIntegers.csproj", "{E1495CA9-2E4C-4E6A-969F-585D146716D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericCountMethodStrings", "GenericCountMethodStrings\GenericCountMethodStrings.csproj", "{2C72F4FF-7435-4DFC-B997-33908357F64A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericCountMethodStrings", "GenericCountMethodStrings\GenericCountMethodStrings.csproj", "{2C72F4FF-7435-4DFC-B997-33908357F64A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericCountMethodDoubles", "GenericCountMethodDoubles\GenericCountMethodDoubles.csproj", "{DA6BF905-2F74-443A-8F54-38E32050871B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{2C72F4FF-7435-4DFC-B997-33908357F64A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C72F4FF-7435-4DFC-B997-33908357F64A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C72F4FF-7435-4DFC-B997-33908357F64A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA6BF905-2F74-443A-8F54-38E32050871B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA6BF905-2F74-443A-8F54-38E32050871B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA6BF905-2F74-443A-8F54-38E32050871B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA6BF905-2F74-443A-8F54-38E32050871B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

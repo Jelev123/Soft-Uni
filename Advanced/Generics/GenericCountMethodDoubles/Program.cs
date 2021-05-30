@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace GenericCountMethodStrings
+namespace GenericCountMethodDoubles
 {
     class Program
     {
@@ -22,8 +22,8 @@ namespace GenericCountMethodStrings
             Console.WriteLine(count);
         }
 
-        
-        public static int GetCount<T>(List<T> data,T element)where T: IComparable
+
+        public static int GetCount<T>(List<T> data, T element) where T : IComparable
         {
             int count = 0;
 
@@ -37,5 +37,9 @@ namespace GenericCountMethodStrings
 
             return count;
         }
+
+
+
     }
-}
+    }
+
