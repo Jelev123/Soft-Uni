@@ -15,9 +15,10 @@ namespace _04._Fast_Food
             Console.WriteLine(queue.Max());
 
             bool isCompleted = true;
+
             for (int i = 0; i < orders.Length; i++)
             {
-                if (quantityOfTheFood > orders[i])
+                if (quantityOfTheFood >= orders[i])
                 {
                     quantityOfTheFood -= queue.Dequeue();
                    
