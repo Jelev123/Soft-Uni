@@ -1,14 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Xml;
+using Microsoft.VisualBasic.CompilerServices;
 
 namespace _03._Maximum_and_Minimum_Element
 {
     class Program
     {
+
         static void Main(string[] args)
         {
-
             int n = int.Parse(Console.ReadLine());
             var stack = new Stack<int>();
 
@@ -39,9 +41,15 @@ namespace _03._Maximum_and_Minimum_Element
                 }
             }
 
-            Console.WriteLine(string.Join(", ",stack));
+            Console.WriteLine(string.Join(", ", stack));
 
 
         }
+
     }
 }
+
+
+
+
+
