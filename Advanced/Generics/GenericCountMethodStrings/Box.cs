@@ -1,21 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace GenericCountMethodStrings
 {
   public  class Box<T>
     {
-        public Box(List<T> str)
+        public Box(List<T> text)
         {
-            this.str = str;
+            Text = text;
         }
 
         public Box()
         {
-            str = new List<T>();
+            Text = new List<T>();
         }
+        public List<T> Text { get; set; }
 
-        public List<T> str { get; set; }
+        public void Add(T item)
+        {
+            Text.Add(item);
+        }
     }
 }

@@ -8,30 +8,34 @@ namespace GenericCountMethodStrings
         static void Main(string[] args)
         {
             int n = int.Parse(Console.ReadLine());
-            Box<string> text = new Box<string>();
+            Box<string> box = new Box<string>();
 
             for (int i = 0; i < n; i++)
             {
                 string line = Console.ReadLine();
-                text.str.Add(line);
+                box.Add(line);
             }
 
+            string element = Console.ReadLine();
+            int count = GetCount(box.Text, element);
 
+            Console.WriteLine(count);
         }
 
-        public static int GetCountOff<T> (List<T> listWithData, T element) where  T: IComparable
+        
+        public static int GetCount<T>(List<T> data,T element)where T: IComparable
         {
             int count = 0;
 
-            foreach (var item in listWithData)
+            foreach (var comparable in data)
             {
-                if (item.CompareTo(element) < 0)
+                if (comparable.CompareTo(element) > 0)
                 {
                     count++;
                 }
-
-                return count;
             }
+
+            return count;
         }
     }
 }
