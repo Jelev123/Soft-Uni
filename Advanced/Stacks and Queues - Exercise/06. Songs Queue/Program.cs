@@ -9,45 +9,41 @@ namespace _06._Songs_Queue
     {
         static void Main(string[] args)
         {
-
-            string[] songs = Console.ReadLine().Split(", ");
-
+            var songs = Console.ReadLine().Split(", ");
             var queue = new Queue<string>(songs);
 
-            
 
             while (queue.Count > 0)
             {
                 string input = Console.ReadLine();
                 string[] tokens = input.Split();
-                string comand = tokens[0];
+                string command = tokens[0];
 
-                if (comand == "Play")
+                if (command == "Play")
                 {
                     queue.Dequeue();
                 }
-                else if (comand == "Add")
+                else if (command == "Add")
                 {
-                    string songName = input.Substring(4);
-
-                    if (!queue.Contains(songName))
+                    string songToAdd = input.Substring(4);
+                    if (!queue.Contains(songToAdd))
                     {
-                        queue.Enqueue(songName);
+                        queue.Enqueue(songToAdd);
                     }
                     else
                     {
-                        Console.WriteLine($"{songName} is already contained!");
+                        Console.WriteLine($"{songToAdd} is already contained!");
                     }
-
                 }
-                else if (comand == "Show")
+                else if (command == "Show")
                 {
                     Console.WriteLine(string.Join(", ",queue));
                 }
-                
+
             }
 
-            Console.WriteLine("No more songs!");
+            Console.WriteLine("No more songs!" );
+
         }
     }
 }

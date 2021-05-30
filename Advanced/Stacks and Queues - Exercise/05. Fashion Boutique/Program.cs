@@ -26,7 +26,7 @@ namespace _05._Fashion_Boutique
                 else
                 {
                     numberOfRacks++;
-                  
+                    sum = 0;
                 }
             }
 
