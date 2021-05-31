@@ -55,9 +55,6 @@ namespace _3._Maximal_Sum
 
                 Console.WriteLine();
             }
-            
-
-            
         }
 
         private static void InitializeMatrix(int[,] matrix)
