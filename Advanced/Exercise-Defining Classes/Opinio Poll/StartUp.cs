@@ -11,22 +11,20 @@ namespace DefiningClasses
         {
             int n = int.Parse(Console.ReadLine());
 
-            List<Person> man = new List<Person>();
+            List<Person> persons = new List<Person>();
 
             for (int i = 0; i < n; i++)
             {
-                string[] tokens = Console.ReadLine().Split();
-                string name = tokens[0];
-                int age = int.Parse(tokens[1]);
+                var input = Console.ReadLine().Split();
+                var name = input[0];
+                var age = int.Parse(input[1]);
 
-                Person person = new Person(name, age);
-                man.Add(person);
-
-
+                persons.Add(new Person(name, age));
             }
-            var people = man.Where(p => p.Age > 30).ToList().OrderBy(p => p.Name);
 
-            foreach (var person in people )
+            var man = persons.Where(p => p.Age > 30).OrderBy(x => x.Name);
+
+            foreach (var person in man)
             {
                 Console.WriteLine($"{person.Name} - {person.Age}");
             }
