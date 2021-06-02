@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace _07._Raw_Data
+﻿namespace _07._Raw_Data
 {
     public class Cargo
     {
@@ -11,7 +7,6 @@ namespace _07._Raw_Data
             this.cargoWeight = cargoWeight;
             this.cargoType = cargoType;
         }
-
 
         public int cargoWeight { get; set; }
         public string cargoType { get; set; }
