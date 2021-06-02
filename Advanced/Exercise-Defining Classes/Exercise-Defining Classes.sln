@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DefiningClasses", "01. Defi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreatingConstructors", "CreatingConstructors\CreatingConstructors.csproj", "{BDF449C1-4348-4C8E-8FEB-FE016A8B58E1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OldestFamilyMember", "OldestFamilyMember\OldestFamilyMember.csproj", "{F775EC3D-B1F8-47BE-BC15-B50E1D850D87}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{BDF449C1-4348-4C8E-8FEB-FE016A8B58E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BDF449C1-4348-4C8E-8FEB-FE016A8B58E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BDF449C1-4348-4C8E-8FEB-FE016A8B58E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F775EC3D-B1F8-47BE-BC15-B50E1D850D87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F775EC3D-B1F8-47BE-BC15-B50E1D850D87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F775EC3D-B1F8-47BE-BC15-B50E1D850D87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F775EC3D-B1F8-47BE-BC15-B50E1D850D87}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
