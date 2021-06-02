@@ -5,11 +5,11 @@ VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Define a Class Person", "StartUp\Define a Class Person.csproj", "{70B7C47A-3596-4FE5-882C-3BC47F665D67}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06. Speed Racing", "06. Speed Racing\06. Speed Racing.csproj", "{DA8898EB-936E-4594-8288-9BBB3498004F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_06_SpeedRacing", "06. Speed Racing\_06_SpeedRacing.csproj", "{DA8898EB-936E-4594-8288-9BBB3498004F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07. Raw Data", "07. Raw Data\07. Raw Data.csproj", "{EFA4CADC-5263-4E58-99C1-A96DC816A166}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Opinio Poll", "Opinio Poll\Opinio Poll.csproj", "{3C6DA84A-B008-44A1-8D8F-2FF0F8DD49AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpinioPoll", "Opinio Poll\OpinioPoll.csproj", "{3C6DA84A-B008-44A1-8D8F-2FF0F8DD49AC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DefiningClasses", "01. Define a Class Person\DefiningClasses.csproj", "{EA533898-606C-43F5-A0EA-B42E63283D29}"
 EndProject

@@ -8,46 +8,42 @@ namespace _06._Speed_Racing
     {
         static void Main(string[] args)
         {
-            int n = int.Parse(Console.ReadLine());
+            var cars = new HashSet<Car>();
 
-            HashSet<Car> cars = new HashSet<Car>();
+            int n = int.Parse(Console.ReadLine());
 
             for (int i = 0; i < n; i++)
             {
-                string[] inputInfo = Console.ReadLine().Split();
+                var input = Console.ReadLine().Split();
+                var model = input[0];
+                var fuelAmount = double.Parse(input[1]);
+                var fuelConsumptionFor1km = double.Parse(input[2]);
 
-                string model = inputInfo[0];
-                double fuelAmount = double.Parse(inputInfo[1]);
-                double fuelConsumption = double.Parse(inputInfo[2]);
-
-                Car car = new Car(model, fuelAmount, fuelConsumption);
+                Car car = new Car(model, fuelAmount, fuelConsumptionFor1km);
                 cars.Add(car);
 
             }
 
-            string input = Console.ReadLine();
+            string command = Console.ReadLine();
 
-            while (input != "End")
+            while (command != "End")
             {
-                string[] data = input.Split();
+                var input = command.Split();
+                var model = input[1];
+                int amountOfKm = int.Parse(input[2]);
+                
 
-                string model = data[1];
-                int fuelAmount = int.Parse(data[2]);
-               
+                Car car = cars.FirstOrDefault(c => c.Model == model);
+                car.Drive(amountOfKm);
 
-                Car car = cars.FirstOrDefault(x => x.Model == model);
 
-                car.Drive(fuelAmount);
-
-                input = Console.ReadLine();
+                command = Console.ReadLine();
             }
 
             foreach (var car in cars)
             {
-                Console.WriteLine($"{car.Model} {car.FuelAmount:F2} {car.TravelledDistance}");
+                Console.WriteLine($"{car.Model} {car.FuelAmount:f2} {car.TravelledDistance}");
             }
-
-           
         }
     }
 }

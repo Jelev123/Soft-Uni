@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace _06._Speed_Racing
 {
-   public class Car
-   {
-      
+    public class Car
+    {
         public Car(string model, double fuelAmount, double fuelConsumptionPerKilometer)
         {
             Model = model;
@@ -22,18 +19,17 @@ namespace _06._Speed_Racing
 
         public void Drive(int amountOfKm)
         {
-            double neededLiters = FuelConsumptionPerKilometer * amountOfKm;
-            bool canMoove = FuelAmount - neededLiters >= 0;
-            if (canMoove)
+            var moveDistance = FuelConsumptionPerKilometer * amountOfKm;
+
+            if (FuelAmount - moveDistance >=0)
             {
-                FuelAmount -= neededLiters;
+                FuelAmount -= moveDistance;
                 TravelledDistance += amountOfKm;
             }
             else
             {
                 Console.WriteLine("Insufficient fuel for the drive");
             }
-
 
         }
     }
