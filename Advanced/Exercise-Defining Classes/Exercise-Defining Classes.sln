@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreatingConstructors", "Cre
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OldestFamilyMember", "OldestFamilyMember\OldestFamilyMember.csproj", "{F775EC3D-B1F8-47BE-BC15-B50E1D850D87}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarSalesman", "CarSalesman\CarSalesman.csproj", "{79113584-AF38-42B0-9993-21E35D03216D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{F775EC3D-B1F8-47BE-BC15-B50E1D850D87}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F775EC3D-B1F8-47BE-BC15-B50E1D850D87}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F775EC3D-B1F8-47BE-BC15-B50E1D850D87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79113584-AF38-42B0-9993-21E35D03216D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79113584-AF38-42B0-9993-21E35D03216D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79113584-AF38-42B0-9993-21E35D03216D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79113584-AF38-42B0-9993-21E35D03216D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
