@@ -6,29 +6,30 @@ namespace CarSalesman
 {
     public class Engine
     {
-        public Engine(string model, int power)
-        {
-           this.Model = model;
-            this.Power = power;
+       
+        //public Engine(string model, int power)
+        //{
+        //   this.Model = model;
+        //    this.Power = power;
            
-        }
+        //}
 
-        public Engine(string model,int power,int displacement) : this(model,power)
-        {
-            this.Displacement = displacement;
-        }
+        //public Engine(string model,int power,int displacement) : this(model,power)
+        //{
+        //    this.Displacement = displacement;
+        //}
 
-        public Engine(string model,int power,string efficiency):this(model,power)
-        {
-            this.Efficiency = efficiency;
-        }
+        //public Engine(string model,int power,string efficiency):this(model,power)
+        //{
+        //    this.Efficiency = efficiency;
+        //}
 
-        public Engine(string model,int power,string efficiency,int displacement)
-        :this(model,power)
-        {
-            this.Efficiency = efficiency;
-            this.Displacement = displacement;
-        }
+        //public Engine(string model,int power,string efficiency,int displacement)
+        //:this(model,power)
+        //{
+        //    this.Efficiency = efficiency;
+        //    this.Displacement = displacement;
+        //}
 
         
         public string Model { get; set; }

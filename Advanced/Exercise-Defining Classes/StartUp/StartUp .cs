@@ -10,11 +10,7 @@ namespace DefiningClasses
     {
         static void Main(string[] args)
         {
-            Person person = new Person();
-            person.Name = "Pesho";
-            person.Age = 20;
-            Console.WriteLine($"{person.Name} {person.Age}");
-
+           
         }
 
 
