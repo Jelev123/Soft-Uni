@@ -67,7 +67,7 @@ namespace PokemonTrainer
             foreach (var item in result)
             {
 
-                Console.WriteLine($"{item.Key} {item.Value.NumberOfBadges} {item.Value.CollectionOfPokemon.Count}");
+                Console.WriteLine($"{item.Value.Name} {item.Value.NumberOfBadges} {item.Value.CollectionOfPokemon.Count}");
 
 
             }
