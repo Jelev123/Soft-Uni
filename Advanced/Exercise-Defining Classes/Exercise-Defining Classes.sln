@@ -11,13 +11,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_07_RawData", "07. Raw Data
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpinioPoll", "Opinio Poll\OpinioPoll.csproj", "{3C6DA84A-B008-44A1-8D8F-2FF0F8DD49AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DefiningClasses", "01. Define a Class Person\DefiningClasses.csproj", "{EA533898-606C-43F5-A0EA-B42E63283D29}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DefiningClasses", "01. Define a Class Person\DefiningClasses.csproj", "{EA533898-606C-43F5-A0EA-B42E63283D29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreatingConstructors", "CreatingConstructors\CreatingConstructors.csproj", "{BDF449C1-4348-4C8E-8FEB-FE016A8B58E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CreatingConstructors", "CreatingConstructors\CreatingConstructors.csproj", "{BDF449C1-4348-4C8E-8FEB-FE016A8B58E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OldestFamilyMember", "OldestFamilyMember\OldestFamilyMember.csproj", "{F775EC3D-B1F8-47BE-BC15-B50E1D850D87}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OldestFamilyMember", "OldestFamilyMember\OldestFamilyMember.csproj", "{F775EC3D-B1F8-47BE-BC15-B50E1D850D87}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarSalesman", "CarSalesman\CarSalesman.csproj", "{79113584-AF38-42B0-9993-21E35D03216D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarSalesman", "CarSalesman\CarSalesman.csproj", "{79113584-AF38-42B0-9993-21E35D03216D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokemonTrainer", "PokemonTrainer\PokemonTrainer.csproj", "{30BCF343-453B-4DF0-8504-8DA9A4569C64}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{79113584-AF38-42B0-9993-21E35D03216D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79113584-AF38-42B0-9993-21E35D03216D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79113584-AF38-42B0-9993-21E35D03216D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30BCF343-453B-4DF0-8504-8DA9A4569C64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30BCF343-453B-4DF0-8504-8DA9A4569C64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30BCF343-453B-4DF0-8504-8DA9A4569C64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30BCF343-453B-4DF0-8504-8DA9A4569C64}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
