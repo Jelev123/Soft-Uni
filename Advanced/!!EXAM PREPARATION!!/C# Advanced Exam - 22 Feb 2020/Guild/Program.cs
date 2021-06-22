@@ -3,9 +3,9 @@ using System.Linq;
 
 namespace Guild
 {
-    public class StartUp
+   public class StartUp
     {
-        public static void Main(string[] args)
+        static void Main(string[] args)
         {
             //Initialize the repository (guild)
             Guild guild = new Guild("Weekend Raiders", 20);

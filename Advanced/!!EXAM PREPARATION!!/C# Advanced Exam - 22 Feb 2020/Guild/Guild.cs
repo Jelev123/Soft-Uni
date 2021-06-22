@@ -7,74 +7,79 @@ namespace Guild
 {
     public class Guild
     {
-
-
         public Guild(string name, int capacity)
         {
             Name = name;
             Capacity = capacity;
-            roster = new Dictionary<string, Player>(Capacity);
+            roster = new Dictionary<string, Player>();
         }
-        private Dictionary<string, Player> roster { get; set; }
+
+        Dictionary<string, Player> roster = new Dictionary<string, Player>();
+
         public string Name { get; set; }
         public int Capacity { get; set; }
+
         public int Count => roster.Count;
-        public void AddPlayer(Player recruit)
+        public void AddPlayer(Player player)
         {
-            if (Capacity > Count && !roster.ContainsKey(recruit.Name))
+            if (Capacity > Count && !roster.ContainsKey(player.Name))
             {
-                roster.Add(recruit.Name, recruit);
+                roster.Add(player.Name,player);
+                
             }
         }
-        public bool RemovePlayer(string name)
+        public  bool RemovePlayer(string name)
         {
-
             if (roster.ContainsKey(name))
             {
                 roster.Remove(name);
                 return true;
             }
+
             return false;
         }
-        public void PromotePlayer(string name)
-        {
-            if (roster.ContainsKey(name))
-            {
-                if (roster[name].Rank != "Member")
-                {
-                    roster[name].Rank = "Member";
-                }
-            }
 
+        public  void PromotePlayer(string name)
+        {
+            if (roster[name].Rank != "Member")
+            {
+                roster[name].Rank = "Member";
+            }
         }
+
         public void DemotePlayer(string name)
         {
-            if (roster.ContainsKey(name))
+            if (roster[name].Rank != "Trial")
             {
-                if (roster[name].Rank != "Trial")
-                {
-                    roster[name].Rank = "Trial";
-                }
+                roster[name].Rank = "Trial";
             }
-
         }
+
         public Player[] KickPlayersByClass(string clas)
+
         {
-            Player[] kicked = (new List<Player>(roster.Values.Where(x => x.Class == clas))).ToArray();
+            Player[] kicked = (new LinkedList<Player>(roster.Values.Where(x => x.Class == clas))).ToArray();
             roster = roster.Where(x => x.Value.Class != clas).ToDictionary(x => x.Key, x => x.Value);
             return kicked;
         }
+
+     
+
         public string Report()
         {
-            string output = $"Players in the guild: {Name}";
+            var sb = new StringBuilder();
+            sb.AppendLine($"Players in the guild: {Name}");
+
             if (roster.Count > 0)
             {
                 foreach (var player in roster)
                 {
-                    output += Environment.NewLine + player.Value.ToString() ;
+                    sb.AppendLine(player.Value.ToString());
                 }
             }
-            return output;
+          
+
+            return sb.ToString().TrimEnd();
         }
     }
 }

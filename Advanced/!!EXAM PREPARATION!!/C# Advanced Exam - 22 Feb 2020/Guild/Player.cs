@@ -12,11 +12,11 @@ namespace Guild
             Description = "n/a";
         }
 
-
         public string Name { get; set; }
         public string Class { get; set; }
         public string Rank { get; set; }
         public string Description { get; set; }
+
 
         #region Overrides of Object
 
