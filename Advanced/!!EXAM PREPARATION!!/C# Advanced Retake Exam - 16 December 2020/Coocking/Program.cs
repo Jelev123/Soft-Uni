@@ -17,11 +17,13 @@ namespace Coocking
                 .Split(" ", StringSplitOptions.RemoveEmptyEntries)
                 .Select(int.Parse));
 
-            int bread = 0;
-            int cake = 0;
-            int pastry = 0;
-            int fruitPie = 0;
-            bool isEmpty = false;
+            
+
+            var food = new SortedDictionary<string, int>();
+            food.Add("Bread", 0);
+            food.Add("Cake", 0);
+            food.Add("Pastry", 0);
+            food.Add("Fruit Pie", 0);
 
             while (queueLiqiud.Count > 0 && stacIngredients.Count > 0)
             {
@@ -31,30 +33,35 @@ namespace Coocking
 
                 if (sum == 25)
                 {
-                    bread++;
+                    
                     queueLiqiud.Dequeue();
                     stacIngredients.Pop();
+                    food["Bread"]++;
+
                 }
 
                else if (sum == 50)
                 {
-                    cake++;
+                    
                     queueLiqiud.Dequeue();
                     stacIngredients.Pop();
+                    food["Cake"]++;
                 }
 
                 else if (sum == 75)
                 {
-                    pastry++;
+                    
                     queueLiqiud.Dequeue();
                     stacIngredients.Pop();
+                    food["Pastry"]++;
                 }
 
                 else if (sum == 100)
                 {
-                    fruitPie++;
+                    
                     queueLiqiud.Dequeue();
                     stacIngredients.Pop();
+                    food["Fruit Pie"]++;
                 }
                 else
                 {
@@ -65,10 +72,9 @@ namespace Coocking
 
             }
 
-            if (stacIngredients.Count == 0 && queueLiqiud.Count == 0)
+            if (food["Bread"] >= 1 && food["Cake"] >= 1 && food["Pastry"] >= 1 && food["Fruit Pie"] >= 1)
             {
                 Console.WriteLine("Wohoo! You succeeded in cooking all the food!");
-
             }
             else
             {
@@ -96,11 +102,11 @@ namespace Coocking
 
             }
 
-            Console.WriteLine($"Bread: {bread}");
-            Console.WriteLine($"Cake: {cake}");
-            Console.WriteLine($"Fruit Pie: {fruitPie}");
-            Console.WriteLine($"Pastry: {pastry}");
-           
+            foreach (var i in food)
+            {
+                Console.WriteLine($"{i.Key}: {i.Value}");
+                
+            }
 
             
 
