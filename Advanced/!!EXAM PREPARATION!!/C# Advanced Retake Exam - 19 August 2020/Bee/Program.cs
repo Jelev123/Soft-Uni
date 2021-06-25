@@ -1,176 +1,167 @@
 ﻿using System;
 
-
-namespace Bees
+namespace Bee
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int n = int.Parse(Console.ReadLine());
-            var matrix = new char[n, n];
-            int beeRows = 0;
-            int beeCols = 0;
-            int flowers = 0;
-            
+            int size = int.Parse(Console.ReadLine());
+            char[,] territory = new char[size, size];
 
-            for (int row = 0; row < n; row++)
+            int rowBee = int.MinValue;
+            int colBee = int.MinValue;
+
+            for (int row = 0; row < size; row++)
             {
-                char[] input = Console.ReadLine().ToCharArray();
-
-                for (int col = 0; col < n; col++)
+                char[] input = Console.ReadLine()
+                    .ToCharArray();
+                for (int col = 0; col < size; col++)
                 {
-                    matrix[row, col] = input[col];
+                    territory[row, col] = input[col];
 
-                    if (matrix[row,col] == 'B')
+                    if (input[col] == 'B')
                     {
-                        beeRows = row;
-                        beeCols = col;
+                        rowBee = row;
+                        colBee = col;
                     }
                 }
             }
 
-            string command = Console.ReadLine();
+            int polinatedFlowers = 0;
+            int neededPolinatedFlowers = 5;
 
-            while (command != "End")
+
+            while (true)
             {
-                if (command == "right")
+                string input = Console.ReadLine();
+
+                if (input == "End")
                 {
-                    matrix[beeRows, beeCols] = '.';
-
-                    beeCols++;
-                    if (beeCols < n)
-                    {
-                        if (matrix[beeRows, beeCols] == 'f')
-                        {
-                            flowers++;
-                            matrix[beeRows, beeCols] = 'B';
-
-                        }
-                        else if (matrix[beeRows, beeCols] == 'O')
-                        {
-                            matrix[beeRows, beeCols] = '.';
-                            beeCols++;
-                            matrix[beeRows, beeCols] = 'B';
-                        }
-
-                    }
-                    else
-                    {
-                        Console.WriteLine("The bee got lost!");
-                        break;
-                    }
-
-
+                    break;
                 }
-                else if (command == "left")
+
+                territory[rowBee, colBee] = '.';
+
+                if (input == "right")
                 {
-                    matrix[beeRows, beeCols] = '.';
-
-                    beeCols--;
-                    if (beeCols >= 0 )
+                    colBee += 1;
+                    if (outOfArray(rowBee, colBee, size))
                     {
-                        if (matrix[beeRows, beeCols] == 'f')
-                        {
-                            flowers++;
-                            matrix[beeRows, beeCols] = 'B';
-
-                        }
-                        else if (matrix[beeRows, beeCols] == 'O')
-                        {
-                            matrix[beeRows, beeCols] = '.';
-                            beeCols--;
-
-                            matrix[beeRows, beeCols] = 'B';
-                        }
-                    }
-                    else
-                    {
-                        Console.WriteLine("The bee got lost!");
                         break;
+                    }
+                    if (territory[rowBee, colBee] == 'O')
+                    {
+                        territory[rowBee, colBee] = '.';
+                        colBee += 1;
+                        if (outOfArray(rowBee, colBee, size))
+                        {
+                            break;
+                        }
                     }
                 }
-                else if (command == "up")
+
+                else if (input == "left")
                 {
-                    matrix[beeRows, beeCols] = '.';
-
-                    beeRows--;
-                    if (beeRows >= 0)
+                    colBee -= 1;
+                    if (outOfArray(rowBee, colBee, size))
                     {
-                        if (matrix[beeRows, beeCols] == 'f')
-                        {
-                            flowers++;
-                            matrix[beeRows, beeCols] = 'B';
-
-                        }
-                        else if (matrix[beeRows, beeCols] == 'O')
-                        {
-                            matrix[beeRows, beeCols] = '.';
-                            beeRows--;
-                            matrix[beeRows, beeCols] = 'B';
-                        }
-                    }
-                    else
-                    {
-                        Console.WriteLine("The bee got lost!");
                         break;
+                    }
+                    if (territory[rowBee, colBee] == 'O')
+                    {
+                        territory[rowBee, colBee] = '.';
+                        colBee -= 1;
+                        if (outOfArray(rowBee, colBee, size))
+                        {
+                            break;
+                        }
                     }
                 }
-                else if (command == "down")
+                else if (input == "up")
                 {
-                    matrix[beeRows, beeCols] = '.';
-                    beeRows++;
-                    if (beeRows < n)
+                    rowBee -= 1;
+                    if (outOfArray(rowBee, colBee, size))
                     {
-                        if (matrix[beeRows, beeCols] == 'f')
+                        break;
+                    }
+                    if (territory[rowBee, colBee] == 'O')
+                    {
+                        territory[rowBee, colBee] = '.';
+                        rowBee -= 1;
+                        if (outOfArray(rowBee, colBee, size))
                         {
-                            flowers++;
-                            matrix[beeRows, beeCols] = 'B';
-
-                        }
-                        else if (matrix[beeRows,beeCols] == 'O')
-                        {
-                            matrix[beeRows, beeCols] = '.';
-                            beeRows++;
-                            if (matrix[beeRows,beeCols] == 'f')
-                            {
-                                flowers++;
-                            }
-                            matrix[beeRows, beeCols] = 'B';
+                            break;
                         }
                     }
-                    else
+
+                }
+                else if (input == "down")
+                {
+                    rowBee += 1;
+                    if (outOfArray(rowBee, colBee, size))
                     {
-                        Console.WriteLine("The bee got lost!");
                         break;
+                    }
+                    if (territory[rowBee, colBee] == 'O')
+                    {
+                        territory[rowBee, colBee] = '.';
+                        rowBee += 1;
+                        if (outOfArray(rowBee, colBee, size))
+                        {
+                            break;
+                        }
                     }
 
                 }
 
-                command = Console.ReadLine();
+                if (territory[rowBee, colBee] == 'f')
+                {
+                    polinatedFlowers++;
+                    territory[rowBee, colBee] = '.';
+                }
+
+                territory[rowBee, colBee] = 'B';
             }
-            if (flowers >= 5)
+
+            if (outOfArray(rowBee, colBee, size))
             {
-                Console.WriteLine($"Great job, the bee managed to pollinate {flowers} flowers!");
+                Console.WriteLine($"The bee got lost!");
+            }
+
+            if (polinatedFlowers < neededPolinatedFlowers)
+            {
+                int needed = neededPolinatedFlowers - polinatedFlowers;
+                Console.WriteLine($"The bee couldn't pollinate the flowers, she needed {needed} flowers more");
             }
             else
             {
-                Console.WriteLine($"The bee couldn't pollinate the flowers, she needed {5-flowers} flowers more"
-                );
+                Console.WriteLine($"Great job, the bee managed to pollinate {polinatedFlowers} flowers!");
             }
 
-
-            for (int row = 0; row < n; row++)
+            for (int i = 0; i < size; i++)
             {
-                for (int col = 0; col < n; col++)
+                for (int j = 0; j < size; j++)
                 {
-                    Console.Write(matrix[row,col]);
+                    Console.Write($"{territory[i, j]}");
                 }
-
                 Console.WriteLine();
             }
+        }
 
+        private static bool outOfArray(int row, int col, int size)
+        {
+            if (row < 0 || row >= size || col < 0 || col >= size)
+            {
+                return true;
+            }
+            else
+            {
+
+                return false;
+            }
 
         }
     }
 }
+
