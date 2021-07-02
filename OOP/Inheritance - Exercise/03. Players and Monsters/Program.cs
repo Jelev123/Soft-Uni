@@ -6,7 +6,7 @@ namespace _03._Players_and_Monsters
     {
         static void Main(string[] args)
         {
-
+            
         }
     }
 }
