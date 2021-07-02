@@ -2,7 +2,7 @@
 {
     public class Wizard : Hero
     {
-        public Wizard(string name, int level) : base(name, level)
+        public Wizard(string username, int level) : base(username, level)
         {
         }
     }

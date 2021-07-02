@@ -2,7 +2,7 @@
 {
     public class Elf : Hero
     {
-        public Elf(string name, int level) : base(name, level)
+        public Elf(string username, int level) : base(username, level)
         {
         }
     }

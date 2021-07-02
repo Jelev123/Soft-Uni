@@ -2,11 +2,11 @@
 
 namespace _04._Need_for_Speed
 {
-    class Program
+    public class StartUp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
         }
     }
 }

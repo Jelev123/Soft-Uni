@@ -1,8 +1,9 @@
 ﻿namespace _03._Players_and_Monsters
 {
-    public class SoulMaster : Wizard
+    public class SoulMaster: DarkWizard
+
     {
-        public SoulMaster(string name, int level) : base(name, level)
+        public SoulMaster(string username, int level) : base(username, level)
         {
         }
     }
