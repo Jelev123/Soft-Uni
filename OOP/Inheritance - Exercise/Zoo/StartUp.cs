@@ -1,12 +1,12 @@
 ﻿using System;
 
-namespace Person
+namespace Zoo
 {
    public class StartUp
     {
         static void Main(string[] args)
         {
-            
+           
         }
     }
 }
