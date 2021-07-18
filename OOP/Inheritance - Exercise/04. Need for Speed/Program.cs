@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace _04._Need_for_Speed
+namespace NeedForSpeed
 {
-    public class StartUp
+   public class StartUp
     {
         static void Main(string[] args)
         {
