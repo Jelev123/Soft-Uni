@@ -1,4 +1,4 @@
-using System;
+
 using NUnit.Framework;
 
 
@@ -8,105 +8,74 @@ namespace Tests
 {
     public class DatabaseTests
     {
-        
 
-        private Database database;
-        private readonly int[] initialData = new int[] {1, 2};
+
+        private Database.Database database;
+        private readonly int[] initialData = new int[] { 1, 2 };
 
         [SetUp]
         public void Setup()
         {
-            this.database = new Database(initialData);
+            database = new Database.Database(initialData);
         }
 
         [Test]
-        public void If_Work_Corecktly()
+        public void TestCollectionLength()
         {
-            int[] data = new int[] {1, 2, 3};
-            this.database = new Database(data);
+            int expectedLength = 2;
 
-            int expectedCont = data.Length;
-            int actualyCount = this.database.Count;
-
-            Assert.AreEqual(expectedCont,actualyCount);
+            Assert.That(database.Count, Is.EqualTo(expectedLength));
         }
 
         [Test]
-        public void Constructor_Throw_Exceptins_When_Is_Bigger()
+        public void TestCorrectAddintToData()
         {
-            int[] data = new[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17};
-
-            Assert.Throws<InvalidOperationException>(() =>
-            {
-                this.database = new Database(data);
-
-            });
-
-
-
-        }
-
-        [Test]
-
-        public void Add_Should_Increase_Count_When_Added_Succesfuly()
-        {
-            this.database.Add(3);
-
             int expectedCount = 3;
-            int actualCount = this.database.Count;
 
-            Assert.AreEqual(expectedCount,actualCount);
+            database.Add(3);
+
+            Assert.That(database.Count, Is.EqualTo(expectedCount));
         }
 
         [Test]
-        public void Thrown_Exceptio_When_Is_Full()
+        public void TestCorrectThrowingExceptionAtAdding()
         {
-            for (int i = 3; i <= 16; i++)
+            int magicNumber = 16;
+
+            for (int i = database.Count; i < 16; i++)
             {
-                database.Add(i);
+                database.Add(magicNumber);
             }
 
-            Assert.Throws<InvalidOperationException>((() =>
-            {
-                database.Add(17);
-            }));
+            Assert.Throws<InvalidOperationException>(() => database.Add(magicNumber));
         }
 
         [Test]
-
-        public void Should_Support_Only_Removing_An_Element()
+        public void TestCorrectRemoveFromCollection()
         {
-            int expected = 1;
+            int expectedCount = 1;
 
             database.Remove();
 
-            int actual = database.Count;
-
-            Assert.AreEqual(expected,actual);
+            Assert.AreEqual(expectedCount, database.Count);
         }
 
         [Test]
-        public void Throw_Exception_When_Data_Is_Empty()
+        public void TestRemovingFromEmptyCollection()
         {
-            database.Remove();
-            database.Remove();
-
-            Assert.Throws<InvalidOperationException>((() =>
+            for (int i = database.Count - 1; i >= 0; i--)
             {
                 database.Remove();
-            }));
+            }
+
+            Assert.Throws<InvalidOperationException>(() => database.Remove());
         }
 
         [Test]
-        public void Fetch_Should_Return_Coppy()
+        public void TestFetchDatabaseFunction()
         {
-
-            int[] data = new int[] {1, 2, 3,};
-            database = new Database(data);
-
-            int[] actualData = this.database.Fetch();
-
-            Assert.AreEqual(data,actualData);
+            int[] actualResult = database.Fetch();
+            CollectionAssert.AreEqual(initialData, actualResult);
         }
     }
 }
