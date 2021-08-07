@@ -1,9 +1,11 @@
-﻿namespace Bakery.Models.Tables.Contracts
+﻿using System.Collections;
+
+namespace Bakery.Models.Tables.Contracts
 {
     using Bakery.Models.BakedFoods.Contracts;
     using Bakery.Models.Drinks.Contracts;
 
-    public interface ITable
+    public interface ITable : IEnumerable
     {
         int TableNumber { get; }
 

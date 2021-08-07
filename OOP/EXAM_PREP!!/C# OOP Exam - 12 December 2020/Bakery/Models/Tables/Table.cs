@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -104,6 +105,24 @@ namespace Bakery.Models.Tables
 
             return sb.ToString().TrimEnd();
         }
+
+        #endregion
+
+        #region Implementation of IEnumerable
+
+        
+
+        #endregion
+
+        #region Implementation of IEnumerable
+
+       
+
+        #endregion
+
+        #region Implementation of IEnumerable
+
+        public abstract IEnumerator GetEnumerator();
 
         #endregion
     }
