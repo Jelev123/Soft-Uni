@@ -6,14 +6,16 @@ using Easter.Utilities.Messages;
 
 namespace Easter.Models.Eggs
 {
-  public  class Egg : IEgg
-  {
+    public class Egg : IEgg
+    {
         private const int DECREASE_ENERGY = 10;
 
-      private string name;
-      private int energyRequired;
+        private string name;
+        private int energyRequired;
 
-      public Egg(string name, int energyRequired)
+        #region Implementation of IEgg
+
+        public Egg(string name, int energyRequired)
         {
             this.Name = name;
             this.EnergyRequired = energyRequired;
@@ -56,5 +58,7 @@ namespace Easter.Models.Eggs
         {
             return this.energyRequired == 0;
         }
-  }
+
+        #endregion
+    }
 }

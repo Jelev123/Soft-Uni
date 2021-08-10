@@ -11,6 +11,7 @@ namespace Easter.Models.Dyes
         private const int DECREASE_POWER = 10;
 
         private int power;
+        #region Implementation of IDye
 
         public Dye(int power)
         {
@@ -37,5 +38,7 @@ namespace Easter.Models.Dyes
         {
             return this.power == 0;
         }
+
+        #endregion
     }
 }

@@ -1,23 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 using Easter.Models.Bunnies.Contracts;
 using Easter.Models.Dyes.Contracts;
 using Easter.Utilities.Messages;
 
-namespace Easter
+namespace Easter.Models.Bunnies
 {
-    public abstract class Bunny: IBunny
+ public  abstract class Bunny : IBunny
     {
+      
 
 
         private const int BUNNY_ENERGY = 10;
 
         private string name;
         private int energy;
-        
 
-      
-        public Bunny(string name, int energy) 
+
+
+        public Bunny(string name, int energy)
         {
             Name = name;
             Energy = energy;
@@ -29,6 +31,8 @@ namespace Easter
 
         }
 
+
+      
 
         public string Name
         {
@@ -74,5 +78,7 @@ namespace Easter
         {
             this.Dyes.Add(dye);
         }
+
+
     }
 }

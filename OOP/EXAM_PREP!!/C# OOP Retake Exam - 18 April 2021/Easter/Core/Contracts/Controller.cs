@@ -9,25 +9,23 @@ using Easter.Models.Dyes.Contracts;
 using Easter.Models.Eggs;
 using Easter.Models.Eggs.Contracts;
 using Easter.Models.Workshops;
-using Easter.Repositories.Contracts;
+using Easter.Models.Workshops.Contracts;
+using Easter.Repositories;
 using Easter.Utilities.Messages;
 
 namespace Easter.Core.Contracts
 {
-  public  class Controller : IController
-  {
+    public class Controller : IController
+    {
+        private BunnyRepository bunnies;
+        private EggRepository eggs;
 
-      private const int MIN_ENERGY = 50;
-
-      private BunnyRepository bunnies;
-      private EggRepository eggs;
-
-
-      public Controller()
+        public Controller()
         {
-            this.bunnies = new BunnyRepository();
-            this.eggs = new EggRepository();
+            bunnies = new BunnyRepository();
+            eggs = new EggRepository();
         }
+
         public string AddBunny(string bunnyType, string bunnyName)
         {
             IBunny bunny = null;
@@ -36,75 +34,75 @@ namespace Easter.Core.Contracts
             {
                 bunny = new HappyBunny(bunnyName);
             }
-
-            if (bunnyType == "SleepyBunny")
+            else if (bunnyType == "SleepyBunny")
             {
                 bunny = new SleepyBunny(bunnyName);
             }
-
-            if (bunny == null)
+            else
             {
                 throw new InvalidOperationException(ExceptionMessages.InvalidBunnyType);
             }
-            this.bunnies.Add(bunny);
 
-            return String.Format(OutputMessages.BunnyAdded, bunnyType, bunnyName);
+            bunnies.Add(bunny);
+
+            return $"Successfully added {bunnyType} named {bunnyName}.";
         }
 
         public string AddDyeToBunny(string bunnyName, int power)
         {
-            IBunny bunny = this.bunnies.FindByName(bunnyName);
+            IDye dye = new Dye(power);
+            IBunny bunny = bunnies.FindByName(bunnyName);
 
-            if (bunnyName == null)
+            if (bunny == null)
             {
                 throw new InvalidOperationException(ExceptionMessages.InexistentBunny);
             }
 
-            IDye dye = new Dye(power);
             bunny.AddDye(dye);
 
-            return  String.Format(OutputMessages.DyeAdded,power,bunnyName);
+            return $"Successfully added dye with power {power} to bunny {bunnyName}!";
         }
 
         public string AddEgg(string eggName, int energyRequired)
         {
             IEgg egg = new Egg(eggName, energyRequired);
+
             eggs.Add(egg);
 
-            return  String.Format(OutputMessages.EggAdded,eggName);
+            return $"Successfully added egg: {eggName}!";
         }
 
         public string ColorEgg(string eggName)
         {
-            Workshop workshop = new Workshop();
-            IEgg egg = this.eggs.FindByName(eggName);
+            IEgg egg = eggs.FindByName(eggName);
 
-            ICollection<IBunny> bunies = this.bunnies
-                .Models
-                .Where(b => b.Energy >= MIN_ENERGY)
-                .OrderByDescending(b => b.Energy)
-                .ToList();
+            IWorkshop workshop = new Workshop();
 
-            if (!bunies.Any())
+            List<IBunny> suitableBunnies = bunnies.Models.Where(x => x.Energy >= 50).OrderByDescending(x => x.Energy).ToList();
+
+            if (suitableBunnies.Any() == false)
             {
                 throw new InvalidOperationException(ExceptionMessages.BunniesNotReady);
             }
 
-
-            IBunny bunny = bunies.First();
-
-            while (bunies.Any())
+            while (suitableBunnies.Any())
             {
-                workshop.Color(egg,bunny);
+                IBunny currentBunny = suitableBunnies.First();
 
-                if (!bunny.Dyes.Any())
+                while (true)
                 {
-                    bunies.Remove(bunny);
-                }
-                if (bunny.Energy == 0)
-                {
-                    bunnies.Remove(bunny);
-                    bunies.Remove(bunny);
+                    if (currentBunny.Energy == 0 || currentBunny.Dyes.All(x => x.IsFinished()))
+                    {
+                        suitableBunnies.Remove(currentBunny);
+                        break;
+                    }
+
+                    workshop.Color(egg, currentBunny);
+
+                    if (egg.IsDone())
+                    {
+                        break;
+                    }
                 }
 
                 if (egg.IsDone())
@@ -113,34 +111,24 @@ namespace Easter.Core.Contracts
                 }
             }
 
-            string output = egg.IsDone()
-                ? String.Format(OutputMessages.EggIsDone)
-                : String.Format(OutputMessages.EggIsNotDone,eggName);
-
-            return output;
+            return $"Egg {eggName} is {(egg.IsDone() ? "done" : "not done")}.";
         }
 
         public string Report()
         {
-            int countColored = this.eggs.Models.Count(p => p.IsDone());
+            StringBuilder sb = new StringBuilder();
 
-            var sb = new StringBuilder();
+            sb.AppendLine($"{eggs.Models.Count(x => x.IsDone())} eggs are done!");
+            sb.AppendLine("Bunnies info:");
 
-            sb.AppendLine($"{countColored} eggs are done!")
-                .AppendLine("Bunnies info:");
-
-
-            foreach (IBunny bunnies in this.bunnies.Models)
+            foreach (IBunny bunny in bunnies.Models)
             {
-                int countDyes = bunnies.Dyes
-                    .Count(p => p.IsFinished());
-                sb.AppendLine($"Name: {bunnies.Name}")
-                    .AppendLine($"Energy: {bunnies.Energy}")
-                    .AppendLine($"Dyes: {countDyes} not finished");
+                sb.AppendLine($"Name: {bunny.Name}");
+                sb.AppendLine($"Energy: {bunny.Energy}");
+                sb.AppendLine($"Dyes: {bunny.Dyes.Count(x => !x.IsFinished())} not finished");
             }
 
             return sb.ToString().TrimEnd();
-
         }
-  }
+    }
 }

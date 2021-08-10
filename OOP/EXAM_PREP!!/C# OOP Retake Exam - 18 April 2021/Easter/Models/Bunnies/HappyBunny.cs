@@ -1,22 +1,14 @@
-﻿using Easter.Models.Dyes.Contracts;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System;
 
 namespace Easter.Models.Bunnies
 {
     public class HappyBunny : Bunny
     {
-        private const int INIT_ENERGY = 100;
-
-        public HappyBunny(string name, int energy) : base(name, INIT_ENERGY)
+        private const int buny_energy = 100;
+        public HappyBunny(string name) : base(name, buny_energy)
         {
-
         }
 
-        public HappyBunny(string bunnyName) : base()
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }

@@ -1,29 +1,26 @@
-﻿using Easter.Models.Dyes.Contracts;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Easter.Models.Bunnies
+﻿namespace Easter.Models.Bunnies
 {
-    class SleepyBunny : Bunny
+    public class SleepyBunny : Bunny
     {
-        private const int INIT_ENERGY = 50;
-        private const int DECREASE_ENERGY = 5;
-        public SleepyBunny(string name, int energy) : base(name, INIT_ENERGY)
-        {
+        private const int BunyEnergy = 50;
+        private const int DecreaseEnergy=5;
 
+        public SleepyBunny(string name) : base(name, BunyEnergy)
+        {
+           
         }
 
-        public SleepyBunny(string bunnyName)
-        {
-            throw new NotImplementedException();
-        }
+       
 
+        #region Overrides of Bunny
 
         public override void Work()
         {
             base.Work();
-            this.Energy -= DECREASE_ENERGY;
+            this.Energy -= DecreaseEnergy;
+
         }
+
+        #endregion
     }
 }
