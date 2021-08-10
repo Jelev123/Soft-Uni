@@ -23,7 +23,8 @@ namespace Easter.Models.Bunnies
         {
             Name = name;
             Energy = energy;
-            
+            this.Dyes = new List<IDye>();
+
         }
 
         protected Bunny()
