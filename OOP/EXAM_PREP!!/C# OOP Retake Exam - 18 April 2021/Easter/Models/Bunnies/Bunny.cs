@@ -71,6 +71,7 @@ namespace Easter.Models.Bunnies
         }
         public virtual void Work()
         {
+            energy -= 10;
             return;
             this.energy -= BUNNY_ENERGY;
         }

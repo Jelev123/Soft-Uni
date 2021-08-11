@@ -46,6 +46,7 @@ namespace Easter.Models.Eggs
             }
             private set
             {
+                energyRequired -= 10;
                 this.energyRequired = value > 0 ? value : 0;
             }
         }
@@ -56,7 +57,7 @@ namespace Easter.Models.Eggs
 
         public bool IsDone()
         {
-            return this.energyRequired == 0;
+            return this.EnergyRequired == 0;
         }
 
         #endregion
