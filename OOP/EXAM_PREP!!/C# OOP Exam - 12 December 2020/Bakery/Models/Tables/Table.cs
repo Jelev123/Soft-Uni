@@ -54,11 +54,12 @@ namespace Bakery.Models.Tables
                 this.numberOfPeople = value;
             }
         }
-        public decimal PricePerPerson { get; }
+        public decimal PricePerPerson { get; private set; }
         public bool IsReserved { get; private set; }
-        public decimal Price { get; }
+        public decimal Price => this.NumberOfPeople * this.PricePerPerson;
         public void Reserve(int numberOfPeople)
         {
+            
             IsReserved = true;
         }
 
@@ -82,7 +83,7 @@ namespace Bakery.Models.Tables
            foodOrders.Clear();
            drinkOrders.Clear();
            numberOfPeople = 0;
-           IsReserved = false;
+         
         }
 
         public string GetFreeTableInfo()
