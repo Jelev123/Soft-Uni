@@ -1,9 +1,10 @@
 ﻿namespace Bakery.Models.BakedFoods
 {
-    public class Bread: BakedFood
-
+    public class Bread : BakedFood
     {
-        public Bread(string name, decimal price) : base(name, 200, price)
+        private const  int InitialBreadPortion = 200;
+
+        public Bread(string name, decimal price) : base(name, InitialBreadPortion, price)
         {
         }
     }

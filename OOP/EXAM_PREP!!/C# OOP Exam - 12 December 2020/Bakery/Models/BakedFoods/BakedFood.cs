@@ -6,20 +6,19 @@ using Bakery.Utilities.Messages;
 
 namespace Bakery.Models.BakedFoods
 {
-   public abstract class BakedFood : IBakedFood
+    public abstract class BakedFood : IBakedFood
     {
         #region Implementation of IBakedFood
 
         private string name;
         private int portion;
-        private decimal price;
+        private decimal pirce;
 
-
-        public BakedFood(string name, int portion,decimal price)
+        protected BakedFood(string name, int portion, decimal price)
         {
-            this.Name = name;
-            this.Price = price;
-            this.Portion = portion;
+            Name = name;
+            Portion = portion;
+            Price = price;
         }
 
         public string Name
@@ -52,7 +51,7 @@ namespace Bakery.Models.BakedFoods
 
         public decimal Price
         {
-            get => this.price;
+            get => this.pirce;
             private set
             {
                 if (value <= 0)
@@ -60,19 +59,18 @@ namespace Bakery.Models.BakedFoods
                     throw new ArgumentException(ExceptionMessages.InvalidPrice);
                 }
 
-                this.price = value;
+                this.pirce = value;
             }
+
+            #endregion
         }
 
         #region Overrides of Object
 
         public override string ToString()
         {
-            return $"{this.Name}: {this.Portion}g - {this.Price:F2}";
-
+            return $"{Name}: {Portion}g - {Price:f2}";
         }
-
-        #endregion
 
         #endregion
     }

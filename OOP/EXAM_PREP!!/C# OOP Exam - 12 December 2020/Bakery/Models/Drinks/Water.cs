@@ -1,8 +1,10 @@
 ﻿namespace Bakery.Models.Drinks
 {
-    public class Water : Drink
+    public class Water :Drink
     {
-        public Water(string name, int portion, string brand) : base(name, portion, 1.50m, brand)
+        private const decimal waterPrice = 1.50m;
+
+        public Water(string name, int portion, string brand) : base(name, portion, waterPrice, brand)
         {
         }
     }

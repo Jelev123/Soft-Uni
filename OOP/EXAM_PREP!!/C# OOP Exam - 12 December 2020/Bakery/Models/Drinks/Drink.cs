@@ -8,19 +8,20 @@ namespace Bakery.Models.Drinks
 {
     public abstract class Drink : IDrink
     {
+        #region Implementation of IDrink
+
         private string name;
         private int portion;
-        private decimal price;
+        private decimal pirce;
         private string brand;
-        public Drink(string name, int portion, decimal price, string brand)
+
+        protected Drink(string name, int portion, decimal price, string brand)
         {
             Name = name;
             Portion = portion;
             Price = price;
             Brand = brand;
         }
-
-        #region Implementation of IDrink
 
         public string Name
         {
@@ -35,7 +36,6 @@ namespace Bakery.Models.Drinks
                 this.name = value;
             }
         }
-
         public int Portion
         {
             get => this.portion;
@@ -49,10 +49,9 @@ namespace Bakery.Models.Drinks
                 this.portion = value;
             }
         }
-
         public decimal Price
         {
-            get => this.price;
+            get => this.pirce;
             private set
             {
                 if (value <= 0)
@@ -60,10 +59,9 @@ namespace Bakery.Models.Drinks
                     throw new ArgumentException(ExceptionMessages.InvalidPrice);
                 }
 
-                this.price = value;
+                this.pirce = value;
             }
         }
-
         public string Brand
         {
             get => this.brand;
@@ -78,15 +76,14 @@ namespace Bakery.Models.Drinks
             }
         }
 
+        #endregion
 
         #region Overrides of Object
 
         public override string ToString()
         {
-            return $"{this.Name} {this.Brand} - {this.Portion}ml - {this.Price:F2}lv";
+            return $"{Name} {Brand} - {Portion}ml - {Price:f2}";
         }
-
-        #endregion
 
         #endregion
     }
