@@ -1,6 +1,6 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
-using System.Linq.Expressions;
 
 namespace Presents.Tests
 {
@@ -21,7 +21,7 @@ namespace Presents.Tests
         [Test]
         public void ConstructorInitializer()
         {
-            Assert.That(bag,Is.Not.Null);
+            Assert.That(bag, Is.Not.Null);
         }
 
 
@@ -48,18 +48,18 @@ namespace Presents.Tests
             Present present = new Present("anme", 25.5);
             bag.Create(present);
 
-            Assert.That(present,Is.EqualTo(bag.GetPresent(present.Name)));
+            Assert.That(present, Is.EqualTo(bag.GetPresent(present.Name)));
         }
 
         [Test]
         public void ReturnMessage()
         {
             Present present = new Present("anme", 25.5);
-            string expected= $"Successfully added present {present.Name}.";
+            string expected = $"Successfully added present {present.Name}.";
 
             string actual = bag.Create(present);
 
-            Assert.AreEqual(expected,actual);
+            Assert.AreEqual(expected, actual);
 
         }
 
@@ -70,7 +70,7 @@ namespace Presents.Tests
             bag.Create(present);
             bag.Remove(present);
 
-            Assert.That(bag.GetPresent(present.Name),Is.Null);
+            Assert.That(bag.GetPresent(present.Name), Is.Null);
         }
 
         [Test]
@@ -84,7 +84,7 @@ namespace Presents.Tests
             bag.Create(presentTwo);
             bag.Create(presentThree);
 
-            Assert.That(presentTwo,Is.EqualTo(bag.GetPresentWithLeastMagic()));
+            Assert.That(presentTwo, Is.EqualTo(bag.GetPresentWithLeastMagic()));
         }
 
         [Test]
