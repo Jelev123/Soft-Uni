@@ -35,6 +35,14 @@ namespace Aquariums.Tests
         }
 
         [Test]
+        public void Ctor_AquariumProperlySetNameAndCapacity()
+        {
+            aquarium = new Aquarium("Ribite", 10);
+            Assert.That(aquarium.Name, Is.EqualTo("Ribite"));
+            Assert.That(aquarium.Capacity, Is.EqualTo(10));
+        }
+
+        [Test]
         public void CountIncreasesWhenAddFish()
         {
             int count = 5;
