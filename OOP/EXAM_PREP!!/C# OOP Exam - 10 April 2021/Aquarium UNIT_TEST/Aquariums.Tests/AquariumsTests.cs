@@ -43,16 +43,12 @@ namespace Aquariums.Tests
         }
 
         [Test]
-        public void CountIncreasesWhenAddFish()
+        public void Count_Properly()
         {
-            int count = 5;
-
-            for (int i = 0; i < count; i++)
-            {
-                aquarium.Add(new Fish($"{i}"));
-            }
-
-            Assert.AreEqual(count, aquarium.Count);
+            fish = new Fish("Gosho");
+            aquarium = new Aquarium("Na gosho", 2);
+            this.aquarium.Add(fish);
+            Assert.That(aquarium.Count, Is.EqualTo(1));
         }
 
         [Test]
