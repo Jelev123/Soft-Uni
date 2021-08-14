@@ -7,27 +7,17 @@ namespace Aquariums.Tests
 
     public class AquariumsTests
     {
+
         private string name = "Aquamen";
         private int capacity = 10;
         private Aquarium aquarium;
+        private Fish fish;
 
         [SetUp]
         public void SetUp()
         {
             aquarium = new Aquarium(name, capacity);
         }
-
-        //[Test]
-        //public void NameShouldReturnsName()
-        //{
-        //    Assert.AreEqual(name,aquarium.Name);
-        //}
-
-        //[Test]
-        //public void CapacityShouldReturnCapacity()
-        //{
-        //    Assert.AreEqual(capacity,aquarium.Capacity);
-        //}
 
         [Test]
         [TestCase("")]
@@ -60,24 +50,23 @@ namespace Aquariums.Tests
         [Test]
         public void AddShouldThrowExceptionWhenIsFull()
         {
-         
-            for (int i = 0; i < 10; i++)
-            {
-                aquarium.Add(new Fish($"{i}"));
-            }
 
-            Assert.Throws<InvalidOperationException>((() => aquarium.Add(new Fish("name"))));
+            Fish firstFish = new Fish("Ivan");
+            Fish secondFish = new Fish("Gosho");
+            aquarium = new Aquarium("Ribite", 1);
+            aquarium.Add(firstFish);
+            Assert.Throws<InvalidOperationException>(() => aquarium.Add(secondFish));
         }
 
         [Test]
         public void RemoveShouldThrowExceptionIfIsNull()
         {
-            for (int i = 0; i < 10; i++)
-            {
-                aquarium.Add(new Fish($"{i}"));
-            }
-
-            Assert.Throws<InvalidOperationException>((() => aquarium.RemoveFish("name")));
+            fish = new Fish("Pesho");
+            aquarium = new Aquarium("Ribite", 5);
+            aquarium.Add(fish);
+            Assert.That(aquarium.Count, Is.EqualTo(1));
+            aquarium.RemoveFish("Pesho");
+            Assert.That(aquarium.Count, Is.EqualTo(0));
         }
 
         [Test]
