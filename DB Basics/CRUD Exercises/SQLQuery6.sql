@@ -183,6 +183,41 @@ VALUES
 	
 	SELECT	(FirstName + '.' + LastName + '@softuni.bg') as [Full Email Address] from Employees 
 
+	SELECT	DISTINCT Salary FROM	Employees
+
+SELECT * FROM Employees 
+WHERE	JobTitle = 'Sales Representative'
+
+SELECT	FirstName,LastName,JobTitle FROM	dbo.Employees 
+WHERE	Salary >= 20000 AND	 Salary <= 30000
+
+SELECT (FirstName + ' ' + MiddleName + ' ' + LastName) AS [Full Name] from Employees
+WHERE	Salary	= 25000 or Salary = 14000 or Salary	= 12500 or Salary	= 23600
+
+SELECT	FirstName,LastName FROM dbo.Employees 
+WHERE	dbo.Employees.ManagerID	IS NULL	
+
+SELECT	FirstName,LastName,Salary FROM dbo.Employees 
+WHERE	dbo.Employees.Salary	> 50000 ORDER BY	dbo.Employees.Salary DESC	
+
+
+SELECT TOP 5 FirstName,Lastname FROM dbo.Employees e	ORDER BY e.Salary DESC	
+
+SELECT FirstName,LastName FROM dbo.Employees e	
+WHERE	DepartmentID	> 4 Or DepartmentID	< 4
+
+SELECT *FROM dbo.Employees
+ORDER BY	dbo.Employees.Salary desc,FirstName asc,LastName DESC,dbo.Employees.MiddleName ASC
+
+CREATE VIEW	V_EmployeesSalaries as
+SELECT FirstName,LastName,Salary 
+FROM dbo.Employees e 
+
+CREATE VIEW V_EmployeeNameJobTitle AS
+(SELECT CONCAT (FirstName,' ',isnull(MiddleName, ''),' ',LastName) AS [Full Name], JobTitle	
+ FROM dbo.Employees	)	
+
+
 	SELECT DISTINCT	 dbo.Employees.JobTitle FROM dbo.Employees 
 
 	SELECT TOP 10 * FROM dbo.Projects p	
