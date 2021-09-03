@@ -190,6 +190,17 @@ VALUES
 	
 
 	SELECT TOP 7 FirstName,LastName,HireDate FROM dbo.Employees e	
-	ORDER BY e.HireDate	desc
+	ORDER BY e.HireDate	DESC
+
 	
+	SELECT * FROM dbo.Departments d	
 	
+	SELECT * FROM dbo.Employees e	
+
+	UPDATE dbo.Employees
+	SET
+	   
+	    Salary += dbo.Employees.Salary * 0.12
+		WHERE dbo.Employees.DepartmentID	IN (1,2,4,11)
+	   
+	SELECT Salary FROM dbo.Employees e	
