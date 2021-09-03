@@ -179,6 +179,8 @@ VALUES
 
 	SELECT	 FirstName,LastName,Salary FROM	Employees
 
+	SELECT	FirstName,MiddleName,LastName from Employees 	
+
 	SELECT DISTINCT	 dbo.Employees.JobTitle FROM dbo.Employees 
 
 	SELECT * FROM dbo.Employees e	
