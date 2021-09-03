@@ -204,3 +204,10 @@ VALUES
 		WHERE dbo.Employees.DepartmentID	IN (1,2,4,11)
 	   
 	SELECT Salary FROM dbo.Employees e	
+
+	USE [Geography]
+
+	SELECT PeakName FROM Peaks 
+	ORDER BY PeakName ASC	
+
+	
