@@ -185,7 +185,10 @@ VALUES
 
 	SELECT DISTINCT	 dbo.Employees.JobTitle FROM dbo.Employees 
 
-	SELECT * FROM dbo.Employees e	
+	SELECT TOP 10 * FROM dbo.Projects p	
+	ORDER BY	p.StartDate	ASC	, [Name] ASC	
+	
+
 
 	
 	
