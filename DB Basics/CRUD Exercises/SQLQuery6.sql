@@ -220,5 +220,12 @@ VALUES
 
 	
 
-
+	SELECT CountryName ,CountryCode,
+	CASE
+	WHEN CurrencyCode = 'EUR' THEN 'Euro'
+	ELSE 'Not Euro'
+	END as [CurrencyCode]
+	FROM Countries
+	ORDER BY CountryName ASC	
+			
 	
