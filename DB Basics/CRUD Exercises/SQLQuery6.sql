@@ -210,4 +210,15 @@ VALUES
 	SELECT PeakName FROM Peaks 
 	ORDER BY PeakName ASC	
 
+	SELECT * FROM Countries
+
+
+
+	SELECT TOP 30 CountryName,[Population] FROM Countries
+	WHERE ContinentCode = 'EU'
+	ORDER BY  [Population] desc
+
+	
+
+
 	
