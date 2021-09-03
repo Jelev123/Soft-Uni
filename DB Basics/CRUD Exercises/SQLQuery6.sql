@@ -179,7 +179,9 @@ VALUES
 
 	SELECT	 FirstName,LastName,Salary FROM	Employees
 
-	SELECT	FirstName,MiddleName,LastName from Employees 	
+	SELECT	FirstName,MiddleName,LastName from Employees 
+	
+	SELECT	(FirstName + '.' + LastName + '@softuni.bg') as [Full Email Address] from Employees 
 
 	SELECT DISTINCT	 dbo.Employees.JobTitle FROM dbo.Employees 
 
