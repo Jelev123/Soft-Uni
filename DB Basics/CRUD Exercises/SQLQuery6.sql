@@ -227,5 +227,10 @@ VALUES
 	END as [CurrencyCode]
 	FROM Countries
 	ORDER BY CountryName ASC	
+
+	USE Diablo
+
+	SELECT [Name] FROM Characters
+	ORDER BY [Name] asc
 			
 	
