@@ -189,6 +189,7 @@ VALUES
 	ORDER BY	p.StartDate	ASC	, [Name] ASC	
 	
 
-
+	SELECT TOP 7 FirstName,LastName,HireDate FROM dbo.Employees e	
+	ORDER BY e.HireDate	desc
 	
 	
