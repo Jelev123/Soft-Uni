@@ -82,4 +82,28 @@ VALUES
   ('Nova',3)
 
 
-  SELECT * FROM dbo.Models m	
+
+  CREATE TABLE Teachers
+  (
+    TeacherID int PRIMARY key NOT null,
+	[Name] char(10) NOT null,
+	ManagerID int FOREIGN	 KEY REFERENCES	dbo.Teachers	(TeacherID	)
+	
+  )
+
+  INSERT INTO dbo.Teachers
+  (
+      TeacherID,
+      [Name],
+      ManagerID
+  )
+  VALUES
+  (101,'John', NULL	),
+  (102,'Maya', 106	),
+  (103,'Silvia', 106	),
+  (104,'Ted', 105),
+  (105,'Mark', 101	),
+  (106,'Greta', 101)
+
+
+ 
