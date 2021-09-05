@@ -106,4 +106,48 @@ VALUES
   (106,'Greta', 101)
 
 
- 
+
+  CREATE DATABASE [OnlineStore]
+
+
+
+  CREATE TABLE Cities
+  (
+    CityID int PRIMARY KEY IDENTITY	,
+	[Name] nvarchar(50)
+  )
+
+
+  CREATE TABLE Costumers
+  (
+   CostumerID int PRIMARY KEY identity,
+   [Name] nvarchar(	50) NOT null,
+   Birthdate date NOT null,
+   CityID int NOT NULL FOREIGN	KEY REFERENCES dbo.Cities(CityID)
+  )
+
+  CREATE TABLE Orders
+  (
+    OrderID int PRIMARY KEY IDENTITY,
+	CostumerID int NOT NULL FOREIGN	KEY REFERENCES	dbo.Costumers(CostumerID	)
+  )
+
+ CREATE TABLE ItemsTypes
+ (
+   ItemTypeID int PRIMARY KEY IDENTITY	,
+   [Name] nvarchar(	50)
+ )
+
+ CREATE TABLE Items
+ (
+  ItemID int PRIMARY KEY IDENTITY	,
+  [Name] nvarchar(	50),
+  ItemTypeID int NOT NULL FOREIGN	KEY REFERENCES	dbo.ItemsTypes	(ItemTypeID	)
+ )
+
+ CREATE TABLE OrderItems 
+(
+ OrderID int NOT NULL FOREIGN	KEY REFERENCES	dbo.Orders	(	OrderID),
+ ItemID int NOT NULL FOREIGN	KEY REFERENCES	dbo.Items(ItemID),
+ PRIMARY KEY (OrderID	, ItemID)
+)
