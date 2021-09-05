@@ -151,3 +151,44 @@ VALUES
  ItemID int NOT NULL FOREIGN	KEY REFERENCES	dbo.Items(ItemID),
  PRIMARY KEY (OrderID	, ItemID)
 )
+
+
+
+CREATE DATABASE University 
+
+
+CREATE TABLE Majors
+(
+ MajorID int PRIMARY KEY IDENTITY	,
+ [Name] nvarchar (50)
+)
+
+CREATE TABLE	Students
+(
+ StudentID int PRIMARY KEY IDENTITY	,
+ StudentNumber int NOT null,
+ StudentName nvarchar (50) NOT NULl,
+ MajorID int NOT NULL FOREIGN	KEY	REFERENCES	dbo.Majors	(MajorID	)
+)
+
+CREATE TABLE Payments
+(
+  PaymentID int PRIMARY KEY IDENTITY	,
+  PaymentDate date NOT null,
+  PaymentAmount decimal NOT NULL,
+  StudentID int NOT NULL FOREIGN	KEY REFERENCES	dbo.Students	(StudentID	)
+)
+
+CREATE TABLE Subjects
+(
+ SubjectID int PRIMARY KEY IDENTITY	,
+ SubjectName nvarchar(50)
+)
+
+
+CREATE TABLE Agenda
+(
+  StudentID int NOT NULL FOREIGN	KEY REFERENCES	dbo.Students	(StudentID	),
+  SubjectID int NOT NULL FOREIGN	KEY REFERENCES	dbo.Subjects	(SubjectID	),
+  PRIMARY KEY (StudentID,SubjectID)
+)
