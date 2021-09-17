@@ -23,4 +23,9 @@ where d.[Name] = 'Engineering'
 order by e.DepartmentID desc
 
 
-order by ep.EmployeeID asc
+select FirstName,LastName,HireDate,d.[Name] as DeptName from Employees as e
+join Departments as d
+on e.DepartmentID = d.DepartmentID
+where e.HireDate > '1999-01-01' And d.[Name] in ('Sales' ,'Finance')
+order by e.HireDate asc
+
