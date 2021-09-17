@@ -21,3 +21,6 @@ join Departments as d
 on e.DepartmentID = d.DepartmentID
 where d.[Name] = 'Engineering'
 order by e.DepartmentID desc
+
+
+order by ep.EmployeeID asc
