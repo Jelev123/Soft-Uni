@@ -15,3 +15,9 @@ join Departments as d
 on e.DepartmentID = d.DepartmentID
 where d.[Name] = 'Sales'
 order by EmployeeID asc
+
+select top ( 5) EmployeeID,FirstName,Salary,d.[Name] from Employees as e
+join Departments as d
+on e.DepartmentID = d.DepartmentID
+where d.[Name] = 'Engineering'
+order by e.DepartmentID desc
