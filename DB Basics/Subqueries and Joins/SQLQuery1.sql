@@ -54,3 +54,12 @@ on e.EmployeeID = ep.EmployeeID
 join Projects as p on ep.ProjectID = p.ProjectID
 where e.EmployeeID = 24
 
+
+select top(50) e1.EmployeeID,concat(e1.FirstName , ' ' , e1.LastName) as EmployeeName,
+                             concat(e2.FirstName , ' ', e2.LastName) as ManagerName,
+							 d.[Name] as DepartmentName
+from Employees as e1
+join Employees as e2 on e1.ManagerID = e2.EmployeeID 
+join Departments as d on d.DepartmentID =e1.DepartmentID
+order by EmployeeID
+
