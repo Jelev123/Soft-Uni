@@ -45,3 +45,12 @@ AND (FORMAT(p.StartDate, 'DD-MM-YYYY') > '13/08/2002' AND p.EndDate IS NULL)
 ORDER BY e.EmployeeID
 
 
+select e.EmployeeID,FirstName,
+Case
+When DatePart(Year,p.StartDate) >= 2005 then null else p.[Name] End as [ProjectName]
+from Employees as e
+join EmployeesProjects as ep
+on e.EmployeeID = ep.EmployeeID 
+join Projects as p on ep.ProjectID = p.ProjectID
+where e.EmployeeID = 24
+
