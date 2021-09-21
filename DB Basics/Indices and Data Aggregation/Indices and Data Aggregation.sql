@@ -10,4 +10,7 @@ order by Avg(MagicWandSize)
 
 -- 05. Deposits Sum
 
-select * from WizzardDeposits
+select *from WizzardDeposits
+
+select DepositGroup,Sum(DepositAmount) as TotalSum  from WizzardDeposits
+group by DepositGroup
