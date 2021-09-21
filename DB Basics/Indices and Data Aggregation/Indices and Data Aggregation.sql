@@ -20,3 +20,13 @@ select *from WizzardDeposits
 select DepositGroup ,Sum(DepositAmount) as TotalSum from WizzardDeposits
 where MagicWandCreator = 'Ollivander family'
 group by DepositGroup
+
+-- 07. Deposits Filter
+select *from WizzardDeposits
+
+
+select DepositGroup ,Sum(DepositAmount) as TotalSum from WizzardDeposits
+where MagicWandCreator = 'Ollivander family'
+group by DepositGroup
+having Sum(DepositAmount) < 150000
+order by Sum(DepositAmount) desc
