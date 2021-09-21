@@ -10,7 +10,13 @@ order by Avg(MagicWandSize)
 
 -- 05. Deposits Sum
 
+select DepositGroup,Sum(DepositAmount) as TotalSum  from WizzardDeposits
+group by DepositGroup
+
+--06. Deposits Sum for Ollivander Family
+
 select *from WizzardDeposits
 
-select DepositGroup,Sum(DepositAmount) as TotalSum  from WizzardDeposits
+select DepositGroup ,Sum(DepositAmount) as TotalSum from WizzardDeposits
+where MagicWandCreator = 'Ollivander family'
 group by DepositGroup
