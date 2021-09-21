@@ -67,3 +67,4 @@ order by EmployeeID
 
 select min([Average Salary]) as MinAverageSalary from (select DepartmentID, avg(Salary) as [Average Salary]  from Employees
 group by DepartmentID) as Salary
+
