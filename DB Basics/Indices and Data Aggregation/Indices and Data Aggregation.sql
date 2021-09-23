@@ -75,3 +75,15 @@ select * from WizzardDeposits
 select  distinct left (FirstName , 1) as FirstLetter from WizzardDeposits
 group by FirstName, DepositGroup 
 having DepositGroup = 'Troll Chest' 
+
+--11. Average Interest
+
+select * from WizzardDeposits
+
+select DepositGroup , IsDepositExpired,avg(DepositInterest) as AverageInterest from WizzardDeposits
+where DepositStartDate > '01/01/1985'
+group by DepositGroup, IsDepositExpired 
+order by DepositGroup desc,IsDepositExpired asc
+
+
+
