@@ -100,3 +100,18 @@ order by DepartmentID
 select DepartmentID,min(Salary) as MinimumSalary from Employees
 where DepartmentID in (2,5,7) and HireDate > '01/01/2000'
 group by DepartmentID
+
+-- 15. Employees Average Salaries
+select * from Employees
+
+select * into HighSalary from Employees
+where Salary > 30000
+
+Delete from HighSalary where ManagerID=42
+
+update HighSalary
+set Salary= Salary + 5000
+where DepartmentID=1
+
+select DepartmentID,avg(Salary) as AverageSalary from HighSalary
+group by DepartmentID
