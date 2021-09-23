@@ -66,3 +66,12 @@ When Age between 41 and 50 then '[41-50]'
 When Age between 51 and 60 then '[51-60]'
 else '[61+]'
 end)
+
+
+-- 10. First Letter
+
+select * from WizzardDeposits
+
+select  distinct left (FirstName , 1) as FirstLetter from WizzardDeposits
+group by FirstName, DepositGroup 
+having DepositGroup = 'Troll Chest' 
