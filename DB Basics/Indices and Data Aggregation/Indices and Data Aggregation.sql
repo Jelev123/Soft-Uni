@@ -122,3 +122,9 @@ group by DepartmentID
 select DepartmentID, max(Salary) as MaxSalary from Employees
 group by DepartmentID
 having max(Salary) not between 30000 and 70000
+
+-- 17. Employees Count Salaries
+
+
+select Count(Salary) as [Count] from Employees
+where ManagerID is NUll
