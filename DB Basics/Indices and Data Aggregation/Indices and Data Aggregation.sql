@@ -115,3 +115,10 @@ where DepartmentID=1
 
 select DepartmentID,avg(Salary) as AverageSalary from HighSalary
 group by DepartmentID
+
+
+-- 16. Employees Maximum Salaries
+
+select DepartmentID, max(Salary) as MaxSalary from Employees
+group by DepartmentID
+having max(Salary) not between 30000 and 70000
