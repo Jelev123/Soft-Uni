@@ -86,4 +86,12 @@ group by DepositGroup, IsDepositExpired
 order by DepositGroup desc,IsDepositExpired asc
 
 
+-- 13. Departments Total Salaries
+
+select * from Employees
+
+Select DepartmentID, Sum(Salary) from Employees
+group by DepartmentID
+order by DepartmentID
+
 
