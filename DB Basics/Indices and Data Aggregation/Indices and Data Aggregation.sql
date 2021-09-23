@@ -30,3 +30,11 @@ where MagicWandCreator = 'Ollivander family'
 group by DepositGroup
 having Sum(DepositAmount) < 150000
 order by Sum(DepositAmount) desc
+
+
+--08. Deposit Charge
+select *from WizzardDeposits
+
+SELECT DepositGroup, MagicWandCreator AS [MagicWandCreator], MIN(DepositCharge) AS MinDepositCharge FROM WizzardDeposits
+GROUP BY DepositGroup, MagicWandCreator
+ORDER BY MagicWandCreator, DepositGroup
