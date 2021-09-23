@@ -38,3 +38,31 @@ select *from WizzardDeposits
 SELECT DepositGroup, MagicWandCreator AS [MagicWandCreator], MIN(DepositCharge) AS MinDepositCharge FROM WizzardDeposits
 GROUP BY DepositGroup, MagicWandCreator
 ORDER BY MagicWandCreator, DepositGroup
+
+
+-- 09. Age Groups
+
+select * from WizzardDeposits
+
+Select 
+case
+when Age between 0 and 10 then '[0-10]'
+When Age between 11 and 20 then '[11-20]'
+When Age between 21 and 30 then '[21-30]'
+When Age between 31 and 40 then '[31-40]'
+When Age between 41 and 50 then '[41-50]'
+When Age between 51 and 60 then '[51-60]'
+else '[61+]'
+end
+as AgeGroup ,Count(*) as WizzardsCount from WizzardDeposits
+
+group by 
+(case
+when Age between 0 and 10 then '[0-10]'
+When Age between 11 and 20 then '[11-20]'
+When Age between 21 and 30 then '[21-30]'
+When Age between 31 and 40 then '[31-40]'
+When Age between 41 and 50 then '[41-50]'
+When Age between 51 and 60 then '[51-60]'
+else '[61+]'
+end)
