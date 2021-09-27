@@ -15,5 +15,16 @@ select FirstName,LastName
 from Employees
 where Salary >= @Salary
 
+-- 04. Employees from Town
+
+create procedure usp_GetEmployeesFromTown  (@TownName varchar(50))
+as
+begin
+select e.FirstName,e.LastName from Employees as e
+join Addresses as a on e.AddressID = a.AddressID
+join Towns as t on a.TownID= t.TownID
+where t.[Name] = @TownName
+end
+execute usp_GetEmployeesFromTown  'Sofia'
 
 
