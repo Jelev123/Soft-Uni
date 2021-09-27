@@ -28,3 +28,22 @@ end
 execute usp_GetEmployeesFromTown  'Sofia'
 
 
+-- 05. Salary Level Function
+
+create function ufn_GetSalaryLevel(@salary DECIMAL(18,4)) 
+
+returns varchar(7)
+as
+begin
+declare @SalaryLevel varchar(7)
+
+if (@salary < 30000) begin set @SalaryLevel = 'Low' end
+else if (@salary >= 30000 and @salary <=50000) begin  set @SalaryLevel = 'Average' end
+else 
+begin
+set @SalaryLevel = 'High'
+end
+return @SalaryLevel
+end
+
+
