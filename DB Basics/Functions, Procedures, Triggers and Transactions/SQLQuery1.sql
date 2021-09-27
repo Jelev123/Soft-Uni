@@ -9,9 +9,11 @@ where Salary > 35000
 -- 02. Employees with Salary Above Number
 
 create procedure usp_GetEmployeesSalaryAboveNumber
-(@Salary decimal= 18)
+(@Salary decimal (18,4))
 as
 select FirstName,LastName
 from Employees
 where Salary >= @Salary
+
+
 
