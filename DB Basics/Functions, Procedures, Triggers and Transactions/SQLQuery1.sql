@@ -46,4 +46,15 @@ end
 return @SalaryLevel
 end
 
+-- 06. Employees by Salary Level
+
+
+create procedure usp_EmployeesBySalaryLevel (@SalaryLevel varchar(7))
+as 
+begin
+select FirstName,LastName
+from Employees
+where dbo.ufn_GetSalaryLevel(Salary) = @SalaryLevel
+end 
+
 
