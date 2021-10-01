@@ -57,4 +57,17 @@ from Employees
 where dbo.ufn_GetSalaryLevel(Salary) = @SalaryLevel
 end 
 
+select * from AccountHolders
+
+-- 10. People with Balance Higher Than
+
+create procedure usp_GetHoldersWithBalanceHigherThan (@MinBalance decimal (18,4))
+as 
+begin
+select FirstName,LastName from Accounts as a
+join AccountHolders as ac on ac.Id = a.AccountHolderId
+group by FirstName,LastName
+having Sum(Balance) > @MinBalance
+order by FirstName , LastName
+end 
 
