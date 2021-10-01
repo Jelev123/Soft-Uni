@@ -71,3 +71,14 @@ having Sum(Balance) > @MinBalance
 order by FirstName , LastName
 end 
 
+-- 11. Future Value Function
+
+create function ufn_CalculateFutureValue (@sum decimal(18,4) , @yearlyInterested float, @yearsCount int )
+returns decimal(18,4)
+as
+begin
+declare @futureValue decimal (18,4)
+set @futureValue = @sum * (Power((1 + @yearlyInterested) , @yearsCount));
+return @futureValue
+end
+
