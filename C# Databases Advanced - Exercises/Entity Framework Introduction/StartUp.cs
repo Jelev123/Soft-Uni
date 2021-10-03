@@ -3,6 +3,7 @@ using System.Linq;
 using System.Text;
 using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
 using SoftUni.Data;
+using SoftUni.Models;
 
 namespace SoftUni
 {
@@ -11,7 +12,7 @@ namespace SoftUni
         static void Main(string[] args)
         {
             SoftUniContext softUniContext = new SoftUniContext();
-            string result = GetEmployeesFromResearchAndDevelopment(softUniContext);
+            string result = AddNewAddressToEmployee(softUniContext);
             Console.WriteLine(result);
 
         }
@@ -91,6 +92,41 @@ namespace SoftUni
                     .AppendLine($"{e.FirstName} {e.LastName} from {e.DepartmentName} - {e.Salary:f2}");
             }
             return sb.ToString().TrimEnd();
+
+        }
+
+
+        // 06. Adding a New Address and Updating Employee
+
+        public static string AddNewAddressToEmployee(SoftUniContext context)
+        {
+            var sb = new StringBuilder();
+
+            Address newAddress = new Address()
+            {
+                AddressText = "Vitoshka 15",
+                TownId = 4
+            };
+
+            Employee employeeNakov = context.Employees
+                .First(e => e.LastName == "Nakov");
+
+            employeeNakov.Address = newAddress;
+            context.SaveChanges();
+
+            var employees = context.Employees
+                .OrderByDescending(e => e.AddressId)
+                .Take(10)
+                .Select(e => e.Address.AddressText)
+                .ToList();
+
+            foreach (var e in employees)
+            {
+                sb.AppendLine(e);
+            }
+
+            return sb.ToString().TrimEnd();
+
 
         }
     }
