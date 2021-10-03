@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Text;
+using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
 using SoftUni.Data;
 
 namespace SoftUni
@@ -10,7 +11,7 @@ namespace SoftUni
         static void Main(string[] args)
         {
             SoftUniContext softUniContext = new SoftUniContext();
-            string result = GetEmployeesWithSalaryOver50000(softUniContext);
+            string result = GetEmployeesFromResearchAndDevelopment(softUniContext);
             Console.WriteLine(result);
 
         }
@@ -67,7 +68,31 @@ namespace SoftUni
             return sb.ToString().TrimEnd();
         }
 
+        // 05. Employees from Research and Development
 
+        public static string GetEmployeesFromResearchAndDevelopment(SoftUniContext context)
+        {
+            var sb = new StringBuilder();
+
+            var employee = context.Employees
+                .Where(e => e.Department.Name == "Research and Development")
+                .Select(e => new
+                {
+                    e.FirstName,
+                    e.LastName,
+                    DepartmentName = e.Department.Name,
+                    e.Salary
+                }).OrderBy(e => e.Salary).ThenByDescending(e => e.FirstName).ToList();
+
+
+            foreach (var e in employee)
+            {
+                sb
+                    .AppendLine($"{e.FirstName} {e.LastName} from {e.DepartmentName} - {e.Salary:f2}");
+            }
+            return sb.ToString().TrimEnd();
+
+        }
     }
 }
 
