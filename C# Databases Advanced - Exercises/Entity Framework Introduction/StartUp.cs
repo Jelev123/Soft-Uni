@@ -43,5 +43,10 @@ namespace SoftUni
             return sb.ToString().TrimEnd();
 
         }
+
+        // 04. Employees with Salary Over 50 000
+
+
+
     }
 }
