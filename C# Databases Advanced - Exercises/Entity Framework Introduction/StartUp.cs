@@ -12,7 +12,7 @@ namespace SoftUni
         static void Main(string[] args)
         {
             SoftUniContext softUniContext = new SoftUniContext();
-            string result = AddNewAddressToEmployee(softUniContext);
+            string result = GetEmployee147(softUniContext);
             Console.WriteLine(result);
 
         }
@@ -128,6 +128,69 @@ namespace SoftUni
             return sb.ToString().TrimEnd();
 
 
+        }
+
+
+        // 08. Addresses by Town
+
+        public static string GetAddressesByTown(SoftUniContext context)
+        {
+            var sb = new StringBuilder();
+
+            var employees = context.Addresses
+                .Select(a => new
+                {
+                    a.AddressText,
+                    TownName = a.Town.Name,
+                    EmployeesCount = a.Employees.Count
+                })
+                .OrderByDescending(a => a.EmployeesCount)
+                .ThenBy(a => a.TownName)
+                .ThenBy(a => a.AddressText)
+                .Take(10)
+                .ToList();
+
+            foreach (var e in employees)
+            {
+                
+                    sb.AppendLine($"{e.AddressText}, {e.TownName} - {e.EmployeesCount} employees");
+                
+            }
+
+            return sb.ToString().TrimEnd();
+        }
+
+        // 09. Employee 147
+
+        public static string GetEmployee147(SoftUniContext context)
+        {
+            var sb = new StringBuilder();
+            var employee147 = context.Employees.Where(e => e.EmployeeId == 147)
+                .Select(e => new
+                {
+                    e.FirstName,
+                    e.LastName,
+                    e.JobTitle,
+                    Project = e.EmployeesProjects.Select(ep => ep.Project.Name)
+                        .OrderBy(ep => ep)
+                        .ToList()
+                }).Single();
+                
+
+           
+            
+                sb
+                    .AppendLine($"{employee147.FirstName} {employee147.LastName} - {employee147.JobTitle}");
+
+                foreach (var p in employee147.Project)
+                {
+                    sb
+                        .AppendLine(p);
+                }
+
+            
+
+            return sb.ToString().TrimEnd();
         }
     }
 }
