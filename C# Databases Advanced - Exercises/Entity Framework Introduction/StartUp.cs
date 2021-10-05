@@ -12,7 +12,7 @@ namespace SoftUni
         static void Main(string[] args)
         {
             SoftUniContext softUniContext = new SoftUniContext();
-            string result = GetEmployee147(softUniContext);
+            string result = GetDepartmentsWithMoreThan5Employees(softUniContext);
             Console.WriteLine(result);
 
         }
@@ -171,24 +171,65 @@ namespace SoftUni
                     e.FirstName,
                     e.LastName,
                     e.JobTitle,
-                    Project = e.EmployeesProjects.Select(ep => ep.Project.Name)
-                        .OrderBy(ep => ep)
-                        .ToList()
-                }).Single();
-                
+                    Project=e.EmployeesProjects.Select(ep=>ep.Project.Name).OrderBy(pn=>pn).ToList()
+                                       
+                })
+                .Single();
 
-           
             
                 sb
                     .AppendLine($"{employee147.FirstName} {employee147.LastName} - {employee147.JobTitle}");
 
-                foreach (var p in employee147.Project)
+                foreach (var VARIABLE in employee147.Project)
                 {
-                    sb
-                        .AppendLine(p);
+                    sb.AppendLine(VARIABLE);
                 }
+               
 
-            
+            return sb.ToString().TrimEnd();
+        }
+
+
+        // 10. Departments with More Than 5 Employees
+
+
+        public static string GetDepartmentsWithMoreThan5Employees(SoftUniContext context)
+        {
+            var sb = new StringBuilder();
+
+            var deparments = context.Departments
+                .Where(d => d.Employees.Count() > 5)
+                .OrderBy(e => e.Employees.Count())
+                .ThenBy(d => d.Name)
+                .Select(d => new
+                {
+                    d.Name,
+                    managerFirstName = d.Manager.FirstName,
+                    managerLastName = d.Manager.LastName,
+                    depEmployees = d.Employees
+                        .Select(e => new
+                        {
+                            employeeFirstname = e.FirstName,
+                            employeeLastName = e.LastName,
+                            jobTitle = e.JobTitle
+                        })
+                        .OrderBy(e => e.employeeFirstname)
+                        .ThenBy(e => e.employeeLastName).ToList()
+                })
+                .ToList();
+
+
+            foreach (var e in deparments)
+            {
+                sb
+                    .AppendLine($"{e.Name} – {e.managerFirstName} {e.managerLastName}");
+
+                foreach (var d in e.depEmployees)
+                {
+                    sb.AppendLine($"{d.employeeFirstname}  {d.employeeLastName} - {d.jobTitle}");
+                }
+            }
+                
 
             return sb.ToString().TrimEnd();
         }
