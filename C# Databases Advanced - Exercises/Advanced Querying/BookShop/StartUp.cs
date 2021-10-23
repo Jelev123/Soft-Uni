@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Linq;
+using System.Text;
+using BookShop.Models.Enums;
 
 namespace BookShop
 {
@@ -14,12 +16,12 @@ namespace BookShop
             //DbInitializer.ResetDatabase(db);
             var input = Console.ReadLine();
 
-            var result = GetBooksByAgeRestriction(db, input);
+            var result = GetGoldenBooks(db);
 
             Console.WriteLine(result);
         }
 
-
+        // 1. Age Restriction
         public static string GetBooksByAgeRestriction(BookShopContext context, string command)
         {
             var book = context.Books
@@ -30,6 +32,33 @@ namespace BookShop
                 .ToList();
 
             return String.Join(Environment.NewLine, book);
+        }
+
+        // 2. Golden Books
+        public static string GetGoldenBooks(BookShopContext context)
+        {
+
+            var sb = new StringBuilder();
+            var book = context.Books
+                .Select(s => new
+                {
+                    s.BookId,
+                    s.Copies,
+                    s.Title,
+                    s.EditionType
+                })
+                .Where(s => s.Copies < 5000 && s.EditionType == EditionType.Gold)
+                .OrderBy(s => s.BookId)
+                .ToList();
+
+
+            foreach (var b in book)
+            {
+                sb.AppendLine($"{b.Title}");
+            }
+
+            return sb.ToString().TrimEnd();
+
         }
     }
 }
