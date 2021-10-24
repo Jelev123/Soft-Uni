@@ -19,7 +19,7 @@ namespace BookShop
 
             //int intt = int.Parse(Console.ReadLine());
 
-            var result = GetAuthorNamesEndingIn(db,input);
+            var result = GetBookTitlesContaining(db,input);
 
             Console.WriteLine(result);
         }
@@ -164,6 +164,20 @@ namespace BookShop
         }
 
 
+
+        //8. Book Search
+
+
+        public static string GetBookTitlesContaining(BookShopContext context, string input)
+        {
+            var book = context.Books
+                .Where(s => s.Title.ToLower().Contains(input.ToLower()))
+                .Select(s => s.Title)
+                .OrderBy(s => s)
+                .ToList();
+
+            return String.Join(Environment.NewLine,book);
+        }
 
     }
 }
