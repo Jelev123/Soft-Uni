@@ -19,7 +19,7 @@ namespace BookShop
 
             //int intt = int.Parse(Console.ReadLine());
 
-            var result = GetBooksReleasedBefore(db,input);
+            var result = GetAuthorNamesEndingIn(db,input);
 
             Console.WriteLine(result);
         }
@@ -128,6 +128,36 @@ namespace BookShop
             foreach (var b in book)
             {
                 sb.AppendLine($"{b.Title} - {b.EditionType} - ${b.Price:F2}");
+            }
+
+            return sb.ToString().TrimEnd();
+        }
+
+
+
+
+        // 7. Author Search
+
+
+        public static string GetAuthorNamesEndingIn(BookShopContext context, string input)
+        {
+            var sb = new StringBuilder();
+
+            
+            var author = context.Authors
+                .ToList()
+                .Select(s => new
+                {
+                    FullName = s.FirstName + " " + s.LastName,
+                    s.FirstName
+                })
+                .Where(s => s.FirstName.ToLower().EndsWith(input.ToLower()))
+                .OrderBy(s=>s.FullName)
+                .ToList();
+
+            foreach (var a in author)
+            {
+                sb.AppendLine(a.FullName);
             }
 
             return sb.ToString().TrimEnd();
