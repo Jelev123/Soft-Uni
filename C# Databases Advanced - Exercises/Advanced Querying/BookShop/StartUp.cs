@@ -17,9 +17,9 @@ namespace BookShop
             //DbInitializer.ResetDatabase(db);
             //var input = Console.ReadLine();
 
-            int intt = int.Parse(Console.ReadLine());
+            //int intt = int.Parse(Console.ReadLine());
 
-            var result = CountBooks(db, intt);
+            var result = CountCopiesByAuthor(db);
 
             Console.WriteLine(result);
         }
@@ -219,5 +219,31 @@ namespace BookShop
             return counter;
         }
 
+
+
+        // 11. Total Book Copies
+
+
+
+
+        public static string CountCopiesByAuthor(BookShopContext context)
+        {
+            var sb = new StringBuilder();
+
+            var books = context.Authors
+                .Select(s => new
+                {
+                    FullName = s.FirstName + " " + s.LastName,
+                    totalCopies = s.Books.Select(s => s.Copies).Sum()
+                })
+                .OrderByDescending(s => s.totalCopies).ToList();
+
+            foreach (var book in books)
+            {
+                sb.AppendLine($"{book.FullName} - {book.totalCopies}");
+            }
+
+            return sb.ToString().TrimEnd();
+        }
     }
 }
