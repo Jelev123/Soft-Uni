@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using BookShop.Models.Enums;
@@ -14,11 +15,11 @@ namespace BookShop
         {
             using var db = new BookShopContext();
             //DbInitializer.ResetDatabase(db);
-            //var input = Console.ReadLine();
+            var input = Console.ReadLine();
 
-            int intt = int.Parse(Console.ReadLine());
+            //int intt = int.Parse(Console.ReadLine());
 
-            var result = GetBooksNotReleasedIn(db,intt);
+            var result = GetBooksReleasedBefore(db,input);
 
             Console.WriteLine(result);
         }
@@ -71,12 +72,12 @@ namespace BookShop
             var sb = new StringBuilder();
 
             var book = context.Books
-                .Where(s => s.Price > 40)
                 .Select(s => new
                 {
                     s.Price,
                     s.Title
                 })
+                .Where(s => s.Price > 40)
                 .OrderByDescending(s => s.Price)
                 .ToList();
                
@@ -101,5 +102,38 @@ namespace BookShop
 
             return string.Join(Environment.NewLine, book);
         }
+
+
+
+        //  6. Released Before Date
+
+        public static string GetBooksReleasedBefore(BookShopContext context, string date)
+        {
+            var sb = new StringBuilder();
+
+            var book = context.Books
+                .ToList()
+                .Select(s => new
+                {
+                    s.Title,
+                    s.EditionType,
+                    s.Price,
+                    s.ReleaseDate
+                })
+                .Where(s => DateTime.Parse(s.ReleaseDate.ToString()) < DateTime.ParseExact(date, "dd-MM-yyyy", CultureInfo.InvariantCulture))
+                .OrderByDescending(s => s.ReleaseDate)
+                .ToList();
+
+
+            foreach (var b in book)
+            {
+                sb.AppendLine($"{b.Title} - {b.EditionType} - ${b.Price:F2}");
+            }
+
+            return sb.ToString().TrimEnd();
+        }
+
+
+
     }
 }
