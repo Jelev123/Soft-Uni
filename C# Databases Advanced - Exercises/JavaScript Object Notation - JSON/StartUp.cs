@@ -10,7 +10,7 @@ namespace ProductShop
 {
     public class StartUp
     {
-
+        private static string ResultDirectortyPath = "../../../Datasets/Results";
 
         private static void ResetDataBase(ProductShopContext db)
         {
@@ -24,9 +24,18 @@ namespace ProductShop
         {
             ProductShopContext db = new ProductShopContext();
 
-            string inputJson = File.ReadAllText("../../../Datasets/categories-products.json");
+            
 
-            string result = ImportCategoryProducts(db, inputJson);
+            if (!Directory.Exists(ResultDirectortyPath))
+            {
+                Directory.CreateDirectory(ResultDirectortyPath);
+            }
+
+            string result = GetSoldProducts(db);
+
+
+            File.WriteAllText(ResultDirectortyPath + "/users-sold-products.json", result);
+
             Console.WriteLine(result);
         }
 
@@ -87,6 +96,59 @@ namespace ProductShop
             context.SaveChanges();
 
             return $"Successfully imported {catProducts.Length}";
+
+        }
+
+        // 05. Export Products In Range
+
+        public static string GetProductsInRange(ProductShopContext context)
+        {
+            var product = context.Products
+                .Where(p => p.Price >= 500 && p.Price <= 1000)
+                .OrderBy(p => p.Price)
+                .Select(s => new
+                {
+                    name = s.Name,
+                    price = s.Price,
+                    seller = s.Seller.FirstName + " " + s.Seller.LastName
+                })
+                .ToArray();
+
+            string json = JsonConvert.SerializeObject(product,Formatting.Indented);
+
+            return json;
+        }
+
+
+        //  06. Export Sold Products
+
+        public static string GetSoldProducts(ProductShopContext context)
+        {
+            var product = context.Users
+                .Where(s => s.ProductsSold.Any(p => p.Buyer != null))
+                .OrderBy(s => s.LastName)
+                .ThenBy(s => s.FirstName)
+                .Select(s => new
+                {
+                    firstname = s.FirstName,
+                    lastname = s.LastName,
+                    soldProducts = s.ProductsSold
+                        .Where(b=> b.Buyer != null)
+                        .Select(p => new
+                        {
+                            name = p.Name,
+                            price = p.Price,
+                            buyerFirstName = p.Buyer.FirstName,
+                            buyerLastName = p.Buyer.LastName
+                        })
+                        .ToArray()
+                }).ToArray();
+
+
+            string json = JsonConvert.SerializeObject(product,Formatting.Indented);
+
+            return json;
+
 
         }
     }
