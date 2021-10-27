@@ -66,8 +66,9 @@ namespace ProductShop
 
         public static string ImportCategories(ProductShopContext context, string inputJson)
         {
-            var categories = JsonConvert.DeserializeObject<Category[]>(inputJson);
-            context.Categories.AddRange(categories);
+            var categories = JsonConvert.DeserializeObject<Category[]>(inputJson)
+                .Where(c=> c.Name != null).ToArray();
+            context.AddRange(categories);
             context.SaveChanges();
 
             return $"Successfully imported {categories.Length}";
