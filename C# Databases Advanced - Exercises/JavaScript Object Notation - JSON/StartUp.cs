@@ -10,6 +10,16 @@ namespace ProductShop
 {
     public class StartUp
     {
+
+
+        private static void ResetDataBase(ProductShopContext db)
+        {
+            db.Database.EnsureDeleted();
+            Console.WriteLine("Successfuly Deleted!");
+            db.Database.EnsureCreated();
+            Console.WriteLine("Successfuly Created");
+        }
+
         public static void Main(string[] args)
         {
             ProductShopContext db = new ProductShopContext();
@@ -21,14 +31,7 @@ namespace ProductShop
         }
 
 
-        private static void ResetDataBase(ProductShopContext db)
-        {
-            db.Database.EnsureDeleted();
-            Console.WriteLine("Successfuly Deleted!");
-            db.Database.EnsureCreated();
-            Console.WriteLine("Successfuly Created");
-        }
-
+       
 
         // 01. Import Users
         public static string ImportUsers(ProductShopContext context, string inputJson)
