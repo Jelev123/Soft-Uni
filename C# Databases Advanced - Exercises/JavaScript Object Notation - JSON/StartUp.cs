@@ -62,7 +62,7 @@ namespace ProductShop
 
 
 
-        // 03. Import Products
+        // 03. Import Categories
 
         public static string ImportCategories(ProductShopContext context, string inputJson)
         {
