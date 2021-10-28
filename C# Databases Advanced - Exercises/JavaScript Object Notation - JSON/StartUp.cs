@@ -32,10 +32,10 @@ namespace ProductShop
                 Directory.CreateDirectory(ResultDirectortyPath);
             }
 
-            string result = GetCategoriesByProductsCount(db);
+            string result = GetUsersWithProducts(db);
 
 
-            File.WriteAllText(ResultDirectortyPath + "/categories-by-products.json", result);
+            File.WriteAllText(ResultDirectortyPath + "/users-and-products.json", result);
 
 
             Console.WriteLine(result);
@@ -174,5 +174,50 @@ namespace ProductShop
 
             return json;
         }
+
+        // 08. Export Users and Products
+
+        public static string GetUsersWithProducts(ProductShopContext context)
+        {
+            var users = context.Users
+                .Where(t => t.ProductsSold.Any(s => s.Buyer != null))
+                .Select(s => new
+                {
+                    lastName = s.LastName,
+                    age = s.Age,
+                    soldProducts = new
+                    {
+                        count = s.ProductsSold.Count(p => p.Buyer != null),
+                        products = s.ProductsSold.Where(p => p.Buyer != null)
+                            .Select(d => new
+                            {
+                                name = d.Name,
+                                price = d.Price
+                            })
+                            .ToArray()
+
+                    }
+                })
+                .OrderByDescending(s => s.soldProducts.count)
+                .ToArray();
+
+            var resultObj = new
+            {
+                usersCount = users.Length,
+                users = users
+            };
+
+            var setings = new JsonSerializerSettings()
+            {
+                NullValueHandling = NullValueHandling.Ignore,
+                Formatting = Formatting.Indented
+            };
+
+
+            string json = JsonConvert.SerializeObject(resultObj, setings);
+
+            return json;
+        }
+
     }
 }
