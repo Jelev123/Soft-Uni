@@ -1,1406 +1,1202 @@
 [
   {
-    "firstname": "Gloria",
-    "lastname": "Alexander",
-    "soldProducts": [
-      {
-        "name": "Aspergillus repens",
-        "price": 1231.42,
-        "buyerFirstName": "Jeremy",
-        "buyerLastName": "Woods"
-      },
-      {
-        "name": "Strattera",
-        "price": 658.54,
-        "buyerFirstName": "Ann",
-        "buyerLastName": "Stevens"
-      }
-    ]
+    "category": "For Children",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "138.83"
   },
   {
-    "firstname": "Fred",
-    "lastname": "Allen",
-    "soldProducts": [
-      {
-        "name": "MOIST MOISTURE SKIN TONER",
-        "price": 152.43,
-        "buyerFirstName": null,
-        "buyerLastName": "Thompson"
-      },
-      {
-        "name": "smart sense nicotine",
-        "price": 1444.12,
-        "buyerFirstName": "Billy",
-        "buyerLastName": "Parker"
-      },
-      {
-        "name": "Myristica Argentum Sinus Relief",
-        "price": 904.52,
-        "buyerFirstName": "Rachel",
-        "buyerLastName": "Johnson"
-      }
-    ]
+    "category": "For Children",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1127.61"
   },
   {
-    "firstname": null,
-    "lastname": "Baker",
-    "soldProducts": [
-      {
-        "name": "H-Rosacea Formula",
-        "price": 99.74,
-        "buyerFirstName": "Gloria",
-        "buyerLastName": "Alexander"
-      },
-      {
-        "name": "Enchanted Moments Mistletoe Kisses Hand Sanitizer",
-        "price": 384.99,
-        "buyerFirstName": null,
-        "buyerLastName": "Cunningham"
-      },
-      {
-        "name": "XANTHIUM STRUMARIUM VAR CANADENSE POLLEN",
-        "price": 1091.38,
-        "buyerFirstName": "Carl",
-        "buyerLastName": "Lawson"
-      },
-      {
-        "name": "Trihexyphenidyl Hydrochloride",
-        "price": 64.88,
-        "buyerFirstName": "Brenda",
-        "buyerLastName": "Howell"
-      }
-    ]
+    "category": "For Children",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1285.99"
   },
   {
-    "firstname": "Fred",
-    "lastname": "Barnes",
-    "soldProducts": [
-      {
-        "name": "Allergena",
-        "price": 109.32,
-        "buyerFirstName": null,
-        "buyerLastName": "Mitchell"
-      },
-      {
-        "name": "EMEND",
-        "price": 1365.51,
-        "buyerFirstName": null,
-        "buyerLastName": "Fox"
-      },
-      {
-        "name": "Fair Foundation SPF 15",
-        "price": 1394.24,
-        "buyerFirstName": "Patricia",
-        "buyerLastName": "Cooper"
-      },
-      {
-        "name": "GOONG SECRET CALMING BATH",
-        "price": 742.47,
-        "buyerFirstName": "Fred",
-        "buyerLastName": "Allen"
-      },
-      {
-        "name": "IOPE RETIGEN MOISTURE TWIN CAKE NO.21",
-        "price": 1257.71,
-        "buyerFirstName": "Arthur",
-        "buyerLastName": "Reynolds"
-      },
-      {
-        "name": "ESIKA",
-        "price": 879.37,
-        "buyerFirstName": "Thomas",
-        "buyerLastName": "Snyder"
-      },
-      {
-        "name": "Glyburide",
-        "price": 95.10,
-        "buyerFirstName": "Betty",
-        "buyerLastName": "Ward"
-      },
-      {
-        "name": "allergy eye",
-        "price": 426.91,
-        "buyerFirstName": "Eugene",
-        "buyerLastName": "Stewart"
-      },
-      {
-        "name": "Finasteride",
-        "price": 1374.01,
-        "buyerFirstName": "Wanda",
-        "buyerLastName": "Harris"
-      }
-    ]
+    "category": "Sports",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "542.72"
   },
   {
-    "firstname": null,
-    "lastname": "Bennett",
-    "soldProducts": [
-      {
-        "name": "CLARINS Ever Matte SPF 15 - 105 Nude",
-        "price": 696.06,
-        "buyerFirstName": "Doris",
-        "buyerLastName": "Cook"
-      },
-      {
-        "name": "Warfarin Sodium",
-        "price": 1379.79,
-        "buyerFirstName": "Anna",
-        "buyerLastName": "Parker"
-      },
-      {
-        "name": "Topiramate",
-        "price": 578.77,
-        "buyerFirstName": "Clarence",
-        "buyerLastName": "Fowler"
-      },
-      {
-        "name": "Alcohol Free Antiseptic",
-        "price": 1486.07,
-        "buyerFirstName": "Jonathan",
-        "buyerLastName": "Rodriguez"
-      },
-      {
-        "name": "Lamotrigine Extended Release",
-        "price": 245.63,
-        "buyerFirstName": null,
-        "buyerLastName": "Mitchell"
-      }
-    ]
+    "category": "For Children",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "152.43"
   },
   {
-    "firstname": "Anna",
-    "lastname": "Clark",
-    "soldProducts": [
-      {
-        "name": "Allopurinol",
-        "price": 518.50,
-        "buyerFirstName": "Marie",
-        "buyerLastName": "Williamson"
-      },
-      {
-        "name": "ROPINIROLE HYDROCHLORIDE",
-        "price": 266.44,
-        "buyerFirstName": "Fred",
-        "buyerLastName": "Barnes"
-      },
-      {
-        "name": "Carbon Dioxide Oxygen Mixture",
-        "price": 95.49,
-        "buyerFirstName": "Joshua",
-        "buyerLastName": "Murray"
-      },
-      {
-        "name": "Almond",
-        "price": 367.32,
-        "buyerFirstName": "Emily",
-        "buyerLastName": "Parker"
-      }
-    ]
+    "category": "Sports",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1217.11"
   },
   {
-    "firstname": "Doris",
-    "lastname": "Cook",
-    "soldProducts": [
-      {
-        "name": "Dawn Ultra Antibacterial Hand",
-        "price": 969.86,
-        "buyerFirstName": "Nicole",
-        "buyerLastName": "Harris"
-      },
-      {
-        "name": "ANXIETY/STRESS RELIEF",
-        "price": 324.66,
-        "buyerFirstName": null,
-        "buyerLastName": "Moreno"
-      }
-    ]
+    "category": "Electronics",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "48.80"
   },
   {
-    "firstname": "Patricia",
-    "lastname": "Cooper",
-    "soldProducts": [
-      {
-        "name": "Nighttime Sleep Aid",
-        "price": 1217.11,
-        "buyerFirstName": "Jeremy",
-        "buyerLastName": "Woods"
-      },
-      {
-        "name": "MEDICATED DANDRUFF",
-        "price": 1351.02,
-        "buyerFirstName": "Brandon",
-        "buyerLastName": "Fuller"
-      },
-      {
-        "name": "Shopko Lip Treatment",
-        "price": 861.42,
-        "buyerFirstName": "Brenda",
-        "buyerLastName": "Howell"
-      }
-    ]
+    "category": "Sports",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "519.06"
   },
   {
-    "firstname": null,
-    "lastname": "Cunningham",
-    "soldProducts": [
-      {
-        "name": "Agaricus Equisetum Special Order",
-        "price": 585.93,
-        "buyerFirstName": "Ann",
-        "buyerLastName": "Stevens"
-      },
-      {
-        "name": "Flumazenil",
-        "price": 1151.37,
-        "buyerFirstName": "Ann",
-        "buyerLastName": "Stevens"
-      },
-      {
-        "name": "Ketorolac Tromethamine",
-        "price": 608.18,
-        "buyerFirstName": "Betty",
-        "buyerLastName": "Lawson"
-      },
-      {
-        "name": "Ringers",
-        "price": 1054.37,
-        "buyerFirstName": "Fred",
-        "buyerLastName": "Allen"
-      },
-      {
-        "name": "Yellow Jacket hymenoptera venom Venomil Diagnostic",
-        "price": 23.58,
-        "buyerFirstName": "Jennifer",
-        "buyerLastName": "Riley"
-      },
-      {
-        "name": "pain relief",
-        "price": 938.23,
-        "buyerFirstName": "Patrick",
-        "buyerLastName": "King"
-      }
-    ]
+    "category": "Sports",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "103.58"
   },
   {
-    "firstname": "Carl",
-    "lastname": "Daniels",
-    "soldProducts": [
-      {
-        "name": "Prednisone",
-        "price": 1285.99,
-        "buyerFirstName": "Wanda",
-        "buyerLastName": "Harris"
-      },
-      {
-        "name": "EPZICOM",
-        "price": 895.65,
-        "buyerFirstName": "Carl",
-        "buyerLastName": "Lawson"
-      }
-    ]
+    "category": "Sports",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "135.82"
   },
   {
-    "firstname": "Sarah",
-    "lastname": "Day",
-    "soldProducts": [
-      {
-        "name": "Triamterene and Hydrochlorothiazide",
-        "price": 1416.59,
-        "buyerFirstName": "Betty",
-        "buyerLastName": "Lawson"
-      },
-      {
-        "name": "IOPE SUPER VITAL",
-        "price": 824.68,
-        "buyerFirstName": null,
-        "buyerLastName": "Thompson"
-      }
-    ]
+    "category": "Electronics",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1257.71"
   },
   {
-    "firstname": "Clarence",
-    "lastname": "Fowler",
-    "soldProducts": [
-      {
-        "name": "PredniSONE",
-        "price": 286.43,
-        "buyerFirstName": "Betty",
-        "buyerLastName": "Lawson"
-      }
-    ]
+    "category": "Electronics",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1443.51"
   },
   {
-    "firstname": null,
-    "lastname": "Fox",
-    "soldProducts": [
-      {
-        "name": "GEMCITABINE",
-        "price": 1468.11,
-        "buyerFirstName": "Sandra",
-        "buyerLastName": "Riley"
-      }
-    ]
+    "category": "Electronics",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1405.74"
   },
   {
-    "firstname": "Bonnie",
-    "lastname": "Fox",
-    "soldProducts": [
-      {
-        "name": "Stila Hydrating Primer Oil-Free SPF 30",
-        "price": 179.28,
-        "buyerFirstName": "Anna",
-        "buyerLastName": "Clark"
-      },
-      {
-        "name": "U-max Multi BB",
-        "price": 137.16,
-        "buyerFirstName": "Carl",
-        "buyerLastName": "Lawson"
-      }
-    ]
+    "category": "Electronics",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "391.05"
   },
   {
-    "firstname": "Amanda",
-    "lastname": "Frazier",
-    "soldProducts": [
-      {
-        "name": "Ibuprofen",
-        "price": 1305.96,
-        "buyerFirstName": "Paula",
-        "buyerLastName": "Hill"
-      },
-      {
-        "name": "Benazepril Hydrochloride and Hydrochlorothiazide",
-        "price": 1187.27,
-        "buyerFirstName": null,
-        "buyerLastName": "Cunningham"
-      },
-      {
-        "name": "CHAMOMILLA",
-        "price": 37.97,
-        "buyerFirstName": "Sandra",
-        "buyerLastName": "Riley"
-      },
-      {
-        "name": "No7 Protect and Perfect Foundation Sunscreen Broad Spectrum SPF 15 Cool Ivory",
-        "price": 616.19,
-        "buyerFirstName": "Wanda",
-        "buyerLastName": "Harris"
-      }
-    ]
+    "category": "Sports",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "976.65"
   },
   {
-    "firstname": "Brandon",
-    "lastname": "Fuller",
-    "soldProducts": [
-      {
-        "name": "Effervescent Cold Relief",
-        "price": 1436.07,
-        "buyerFirstName": "Patrick",
-        "buyerLastName": "King"
-      },
-      {
-        "name": "Gehwol med Lipidro",
-        "price": 421.24,
-        "buyerFirstName": "Patrick",
-        "buyerLastName": "King"
-      },
-      {
-        "name": "ORCHID SECRET PACT",
-        "price": 59.53,
-        "buyerFirstName": "Patricia",
-        "buyerLastName": "Fuller"
-      },
-      {
-        "name": "Fexofenadine HCl and Pseudoephedrine HCI",
-        "price": 73.07,
-        "buyerFirstName": "Eugene",
-        "buyerLastName": "Stewart"
-      },
-      {
-        "name": "Gemcitabine",
-        "price": 594.79,
-        "buyerFirstName": null,
-        "buyerLastName": "Mitchell"
-      }
-    ]
+    "category": "Sports",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "405.03"
   },
   {
-    "firstname": "Patricia",
-    "lastname": "Fuller",
-    "soldProducts": [
-      {
-        "name": "Amitiza",
-        "price": 666.58,
-        "buyerFirstName": "Marie",
-        "buyerLastName": "Williamson"
-      },
-      {
-        "name": "Perrigo Benzoyl Peroxide",
-        "price": 873.24,
-        "buyerFirstName": "Anna",
-        "buyerLastName": "Parker"
-      },
-      {
-        "name": "Pollens - Weeds and Garden Plants, Nettle Urtica dioica",
-        "price": 782.77,
-        "buyerFirstName": "Christina",
-        "buyerLastName": "Patterson"
-      }
-    ]
+    "category": "Electronics",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1365.51"
   },
   {
-    "firstname": "Kathy",
-    "lastname": "Gilbert",
-    "soldProducts": [
-      {
-        "name": "Amlodipine Besylate",
-        "price": 122.57,
-        "buyerFirstName": "Jacqueline",
-        "buyerLastName": "Perez"
-      },
-      {
-        "name": "Childrens Allegra Allergy",
-        "price": 650.97,
-        "buyerFirstName": null,
-        "buyerLastName": "Fox"
-      },
-      {
-        "name": "BareMinerals Golden Tan matte",
-        "price": 110.93,
-        "buyerFirstName": "Patrick",
-        "buyerLastName": "King"
-      },
-      {
-        "name": "Gilotrif",
-        "price": 1454.77,
-        "buyerFirstName": "Rachel",
-        "buyerLastName": "Johnson"
-      }
-    ]
+    "category": "Sports",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "393.94"
   },
   {
-    "firstname": "Christine",
-    "lastname": "Gomez",
-    "soldProducts": [
-      {
-        "name": "Americaine",
-        "price": 1165.75,
-        "buyerFirstName": "Marie",
-        "buyerLastName": "Williamson"
-      },
-      {
-        "name": "Labetalol Hydrochloride",
-        "price": 1345.11,
-        "buyerFirstName": "Amanda",
-        "buyerLastName": "Frazier"
-      },
-      {
-        "name": "CALMING DIAPER RASH",
-        "price": 700.92,
-        "buyerFirstName": "Arthur",
-        "buyerLastName": "Reynolds"
-      }
-    ]
+    "category": "Electronics",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "49.17"
   },
   {
-    "firstname": "Nicole",
-    "lastname": "Harris",
-    "soldProducts": [
-      {
-        "name": "ENALAPRIL MALEATE",
-        "price": 210.42,
-        "buyerFirstName": "Christine",
-        "buyerLastName": "Gomez"
-      },
-      {
-        "name": "Acnezzol Base",
-        "price": 710.60,
-        "buyerFirstName": "Patrick",
-        "buyerLastName": "King"
-      }
-    ]
+    "category": "For Children",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "245.63"
   },
   {
-    "firstname": "Wanda",
-    "lastname": "Harris",
-    "soldProducts": [
-      {
-        "name": "DAYWEAR PLUS MULTI PROTECTION TINTED MOISTURIZER",
-        "price": 555.12,
-        "buyerFirstName": "Patricia",
-        "buyerLastName": "Fuller"
-      }
-    ]
+    "category": "Sports",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "696.06"
   },
   {
-    "firstname": null,
-    "lastname": "Harrison",
-    "soldProducts": [
-      {
-        "name": "Warfarin Sodium",
-        "price": 138.83,
-        "buyerFirstName": "Betty",
-        "buyerLastName": "Ward"
-      },
-      {
-        "name": "Aquafresh",
-        "price": 849.93,
-        "buyerFirstName": "Christina",
-        "buyerLastName": "Patterson"
-      },
-      {
-        "name": "Megestrol Acetate",
-        "price": 976.15,
-        "buyerFirstName": null,
-        "buyerLastName": "Thompson"
-      },
-      {
-        "name": "Glipizide and Metformin Hydrochloride",
-        "price": 953.60,
-        "buyerFirstName": null,
-        "buyerLastName": "Schmidt"
-      }
-    ]
+    "category": "Electronics",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "459.89"
   },
   {
-    "firstname": "Diana",
-    "lastname": "Harvey",
-    "soldProducts": [
-      {
-        "name": "Wintergreen Isopropyl Alcohol",
-        "price": 1397.57,
-        "buyerFirstName": "Jonathan",
-        "buyerLastName": "Rodriguez"
-      },
-      {
-        "name": "Ondansetron",
-        "price": 1249.76,
-        "buyerFirstName": "Jonathan",
-        "buyerLastName": "Rodriguez"
-      },
-      {
-        "name": "VITALUMIERE AQUA",
-        "price": 1293.09,
-        "buyerFirstName": "Joshua",
-        "buyerLastName": "Murray"
-      },
-      {
-        "name": "Etodolac",
-        "price": 1443.13,
-        "buyerFirstName": null,
-        "buyerLastName": "Stewart"
-      },
-      {
-        "name": "Aspen",
-        "price": 1046.46,
-        "buyerFirstName": "Patrick",
-        "buyerLastName": "King"
-      }
-    ]
+    "category": "For Children",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "72.71"
   },
   {
-    "firstname": "Benjamin",
-    "lastname": "Henry",
-    "soldProducts": [
-      {
-        "name": "Alternaria alternata",
-        "price": 61.24,
-        "buyerFirstName": "Carl",
-        "buyerLastName": "Lawson"
-      },
-      {
-        "name": "Treatment Set TS336667",
-        "price": 1466.47,
-        "buyerFirstName": "Carl",
-        "buyerLastName": "Lawson"
-      }
-    ]
+    "category": "Sports",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1351.02"
   },
   {
-    "firstname": "Jean",
-    "lastname": "Henry",
-    "soldProducts": [
-      {
-        "name": "DIVALPROEX SODIUM",
-        "price": 1287.03,
-        "buyerFirstName": "Brenda",
-        "buyerLastName": "Howell"
-      },
-      {
-        "name": "LBEL Couleur Luxe Rouge Amplifier XP amplifying SPF 15",
-        "price": 1069.43,
-        "buyerFirstName": "Joshua",
-        "buyerLastName": "Murray"
-      },
-      {
-        "name": "Naproxen",
-        "price": 807.22,
-        "buyerFirstName": "Anna",
-        "buyerLastName": "Parker"
-      },
-      {
-        "name": "Pleo Lat",
-        "price": 720.08,
-        "buyerFirstName": null,
-        "buyerLastName": "Harrison"
-      }
-    ]
+    "category": "For Children",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "967.32"
   },
   {
-    "firstname": "Brenda",
-    "lastname": "Howell",
-    "soldProducts": [
-      {
-        "name": "CD CAPTURE TOTALE Triple Correcting Serum Foundation Wrinkles-Dark Spots-Radiance with sunscreen Broad Spectrum SPF 25 010",
-        "price": 77.23,
-        "buyerFirstName": "Jacqueline",
-        "buyerLastName": "Perez"
-      }
-    ]
+    "category": "For Children",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "789.91"
   },
   {
-    "firstname": "Rachel",
-    "lastname": "Johnson",
-    "soldProducts": [
-      {
-        "name": "Lorazepam",
-        "price": 1134.96,
-        "buyerFirstName": "Paula",
-        "buyerLastName": "Hill"
-      },
-      {
-        "name": "PLANTAGO LANCEOLATA POLLEN",
-        "price": 561.68,
-        "buyerFirstName": "Nicole",
-        "buyerLastName": "Martinez"
-      },
-      {
-        "name": "Albuterol",
-        "price": 108.95,
-        "buyerFirstName": null,
-        "buyerLastName": "Peterson"
-      }
-    ]
+    "category": "Sports",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "520.45"
   },
   {
-    "firstname": "Patrick",
-    "lastname": "King",
-    "soldProducts": [
-      {
-        "name": "ESIKA 3-IN-1 PRO MAKE UP FOUNDATION SPF 20 BASE DE MAQUILLAJE PARA ROSTRO 3-EN-1 PRO FPS 20",
-        "price": 1097.60,
-        "buyerFirstName": "Paula",
-        "buyerLastName": "Hill"
-      },
-      {
-        "name": "leader pain reliever",
-        "price": 1179.79,
-        "buyerFirstName": "Sarah",
-        "buyerLastName": "Day"
-      },
-      {
-        "name": "Leg Cramp Relief",
-        "price": 1345.69,
-        "buyerFirstName": "Kathy",
-        "buyerLastName": "Gilbert"
-      }
-    ]
+    "category": "Sports",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1345.69"
   },
   {
-    "firstname": "Betty",
-    "lastname": "Lawson",
-    "soldProducts": [
-      {
-        "name": "Diastat",
-        "price": 614.14,
-        "buyerFirstName": "Jennifer",
-        "buyerLastName": "Riley"
-      }
-    ]
+    "category": "Electronics",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "77.23"
   },
   {
-    "firstname": "Carl",
-    "lastname": "Lawson",
-    "soldProducts": [
-      {
-        "name": "Laser Block 100",
-        "price": 1135.43,
-        "buyerFirstName": "Jean",
-        "buyerLastName": "Henry"
-      },
-      {
-        "name": "Metformin Hydrochloride",
-        "price": 953.99,
-        "buyerFirstName": "Jeremy",
-        "buyerLastName": "Woods"
-      },
-      {
-        "name": "Buprenorphine hydrochloride",
-        "price": 391.05,
-        "buyerFirstName": "Christina",
-        "buyerLastName": "Patterson"
-      },
-      {
-        "name": "ENBREL",
-        "price": 673.97,
-        "buyerFirstName": "Jonathan",
-        "buyerLastName": "Rodriguez"
-      },
-      {
-        "name": "ropinirole hydrochloride",
-        "price": 103.58,
-        "buyerFirstName": "Marie",
-        "buyerLastName": "Williamson"
-      }
-    ]
+    "category": "For Children",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1287.03"
   },
   {
-    "firstname": "Nicole",
-    "lastname": "Martinez",
-    "soldProducts": [
-      {
-        "name": "Echinacea Quartz Gum Support",
-        "price": 570.08,
-        "buyerFirstName": "Thomas",
-        "buyerLastName": "Snyder"
-      },
-      {
-        "name": "Enalapril Maleate",
-        "price": 72.71,
-        "buyerFirstName": "Thomas",
-        "buyerLastName": "Snyder"
-      },
-      {
-        "name": "Leflunomide",
-        "price": 312.85,
-        "buyerFirstName": "Jacqueline",
-        "buyerLastName": "Perez"
-      },
-      {
-        "name": "MEDI-FIRST Non-Aspirin",
-        "price": 1301.28,
-        "buyerFirstName": "Benjamin",
-        "buyerLastName": "Henry"
-      }
-    ]
+    "category": "For Children",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1134.96"
   },
   {
-    "firstname": null,
-    "lastname": "Mitchell",
-    "soldProducts": [
-      {
-        "name": "NEO-POLY-BAC HYDRO",
-        "price": 967.32,
-        "buyerFirstName": "Sandra",
-        "buyerLastName": "Riley"
-      },
-      {
-        "name": "ziprasidone hydrochloride",
-        "price": 628.66,
-        "buyerFirstName": "Amanda",
-        "buyerLastName": "Frazier"
-      },
-      {
-        "name": "Labetalol hydrochloride",
-        "price": 436.38,
-        "buyerFirstName": "Jean",
-        "buyerLastName": "Henry"
-      },
-      {
-        "name": "Homeopathic Rheumatism",
-        "price": 967.08,
-        "buyerFirstName": "Fred",
-        "buyerLastName": "Barnes"
-      },
-      {
-        "name": "Nevirapine",
-        "price": 1374.72,
-        "buyerFirstName": "Clarence",
-        "buyerLastName": "Fowler"
-      },
-      {
-        "name": "kirkland signature minoxidil",
-        "price": 49.17,
-        "buyerFirstName": null,
-        "buyerLastName": "Bennett"
-      }
-    ]
+    "category": "Electronics",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "61.24"
   },
   {
-    "firstname": "Chris",
-    "lastname": "Mitchell",
-    "soldProducts": [
-      {
-        "name": "Metoprolol Tartrate",
-        "price": 1405.74,
-        "buyerFirstName": "Gloria",
-        "buyerLastName": "Alexander"
-      }
-    ]
+    "category": "Electronics",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1499.29"
   },
   {
-    "firstname": null,
-    "lastname": "Moreno",
-    "soldProducts": [
-      {
-        "name": "Butalbital, Aspirin and Caffeine",
-        "price": 1010.98,
-        "buyerFirstName": null,
-        "buyerLastName": "Schmidt"
-      },
-      {
-        "name": "LANEIGE MYSTIC VEIL FOUNDATION",
-        "price": 20.86,
-        "buyerFirstName": null,
-        "buyerLastName": "Thompson"
-      },
-      {
-        "name": "Pollens - Weeds and Garden Plants, Scotch Broom Cytisus scoparius",
-        "price": 135.82,
-        "buyerFirstName": "Bonnie",
-        "buyerLastName": "Fox"
-      }
-    ]
+    "category": "Sports",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "293.89"
   },
   {
-    "firstname": "Joshua",
-    "lastname": "Murray",
-    "soldProducts": [
-      {
-        "name": "SEPHORA Acne-Fighting Mattifying Moisturizer",
-        "price": 1019.28,
-        "buyerFirstName": "Clarence",
-        "buyerLastName": "Fowler"
-      },
-      {
-        "name": "Metaxalone",
-        "price": 79.94,
-        "buyerFirstName": "Patricia",
-        "buyerLastName": "Fuller"
-      },
-      {
-        "name": "Etomidate",
-        "price": 393.94,
-        "buyerFirstName": "Brenda",
-        "buyerLastName": "Howell"
-      },
-      {
-        "name": "Imipramine Hydrochloride",
-        "price": 648.69,
-        "buyerFirstName": "Patrick",
-        "buyerLastName": "King"
-      }
-    ]
+    "category": "Electronics",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "20.86"
   },
   {
-    "firstname": "Anna",
-    "lastname": "Parker",
-    "soldProducts": [
-      {
-        "name": "Amitriptyline Hydrochloride",
-        "price": 1453.96,
-        "buyerFirstName": "Nicole",
-        "buyerLastName": "Harris"
-      },
-      {
-        "name": "Baza Antifungal",
-        "price": 1162.34,
-        "buyerFirstName": "Nicole",
-        "buyerLastName": "Harris"
-      },
-      {
-        "name": "Glycopyrrolate",
-        "price": 1471.43,
-        "buyerFirstName": "Brenda",
-        "buyerLastName": "Howell"
-      },
-      {
-        "name": "TYLENOL COLD MULTI-SYMPTOM DAYTIME",
-        "price": 1010.81,
-        "buyerFirstName": "Jonathan",
-        "buyerLastName": "Rodriguez"
-      },
-      {
-        "name": "Foaming Hand Sanitizer",
-        "price": 624.72,
-        "buyerFirstName": null,
-        "buyerLastName": "Thompson"
-      },
-      {
-        "name": "Growing Pains",
-        "price": 1077.37,
-        "buyerFirstName": "Jean",
-        "buyerLastName": "Henry"
-      },
-      {
-        "name": "Topical 60 Sec Sodium Fluoride",
-        "price": 1228.84,
-        "buyerFirstName": "Jacqueline",
-        "buyerLastName": "Perez"
-      }
-    ]
+    "category": "For Children",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "367.32"
   },
   {
-    "firstname": "Billy",
-    "lastname": "Parker",
-    "soldProducts": [
-      {
-        "name": "Clearskin",
-        "price": 968.59,
-        "buyerFirstName": "Emily",
-        "buyerLastName": "Parker"
-      },
-      {
-        "name": "Pleo Ginkgo",
-        "price": 613.65,
-        "buyerFirstName": "Anna",
-        "buyerLastName": "Clark"
-      }
-    ]
+    "category": "Electronics",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "969.86"
   },
   {
-    "firstname": "Emily",
-    "lastname": "Parker",
-    "soldProducts": [
-      {
-        "name": "PREMIER VALUE ALLERGY",
-        "price": 1127.61,
-        "buyerFirstName": "Carl",
-        "buyerLastName": "Lawson"
-      },
-      {
-        "name": "Pollens - Trees, Birch Mix",
-        "price": 1153.54,
-        "buyerFirstName": null,
-        "buyerLastName": "Fox"
-      },
-      {
-        "name": "cough and sore throat",
-        "price": 1482.68,
-        "buyerFirstName": "Billy",
-        "buyerLastName": "Parker"
-      },
-      {
-        "name": "PRIMAXIN",
-        "price": 686.66,
-        "buyerFirstName": null,
-        "buyerLastName": "Cunningham"
-      },
-      {
-        "name": "smart sense nighttime cold and flu relief",
-        "price": 1101.77,
-        "buyerFirstName": "Christina",
-        "buyerLastName": "Patterson"
-      },
-      {
-        "name": "Prostate",
-        "price": 716.05,
-        "buyerFirstName": "Christina",
-        "buyerLastName": "Patterson"
-      }
-    ]
+    "category": "Electronics",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "23.58"
   },
   {
-    "firstname": "Christina",
-    "lastname": "Patterson",
-    "soldProducts": [
-      {
-        "name": "Oxygen",
-        "price": 1242.92,
-        "buyerFirstName": "Christine",
-        "buyerLastName": "Gomez"
-      },
-      {
-        "name": "Head and Shoulders Conditioner",
-        "price": 1099.59,
-        "buyerFirstName": null,
-        "buyerLastName": "Fox"
-      },
-      {
-        "name": "up and up temporary minor arthritis pain relief",
-        "price": 1085.78,
-        "buyerFirstName": "Patricia",
-        "buyerLastName": "Cooper"
-      }
-    ]
+    "category": "Sports",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1334.06"
   },
   {
-    "firstname": "Jacqueline",
-    "lastname": "Perez",
-    "soldProducts": [
-      {
-        "name": "Cold and Cough",
-        "price": 218.14,
-        "buyerFirstName": null,
-        "buyerLastName": "Moreno"
-      },
-      {
-        "name": "Glipizide",
-        "price": 621.78,
-        "buyerFirstName": "Eugene",
-        "buyerLastName": "Stewart"
-      }
-    ]
+    "category": "For Children",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "674.63"
   },
   {
-    "firstname": null,
-    "lastname": "Peterson",
-    "soldProducts": [
-      {
-        "name": "Protonix",
-        "price": 466.70,
-        "buyerFirstName": "Christina",
-        "buyerLastName": "Patterson"
-      },
-      {
-        "name": "Buprenorphine hydrochloride and naloxone hydrochloride dihydrate",
-        "price": 293.33,
-        "buyerFirstName": "Betty",
-        "buyerLastName": "Ward"
-      },
-      {
-        "name": "Air",
-        "price": 331.53,
-        "buyerFirstName": null,
-        "buyerLastName": "Mitchell"
-      },
-      {
-        "name": "Ranitidine",
-        "price": 926.64,
-        "buyerFirstName": "Anna",
-        "buyerLastName": "Clark"
-      }
-    ]
+    "category": "For Children",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "210.42"
   },
   {
-    "firstname": "Arthur",
-    "lastname": "Reynolds",
-    "soldProducts": [
-      {
-        "name": "Pioglitazone",
-        "price": 306.56,
-        "buyerFirstName": null,
-        "buyerLastName": "Fox"
-      },
-      {
-        "name": "Azithromycin",
-        "price": 813.87,
-        "buyerFirstName": "Marie",
-        "buyerLastName": "Williamson"
-      }
-    ]
+    "category": "For Children",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1028.27"
   },
   {
-    "firstname": "Jennifer",
-    "lastname": "Riley",
-    "soldProducts": [
-      {
-        "name": "Allopurinol",
-        "price": 48.80,
-        "buyerFirstName": "Fred",
-        "buyerLastName": "Allen"
-      },
-      {
-        "name": "Eszopiclone",
-        "price": 405.03,
-        "buyerFirstName": "Doris",
-        "buyerLastName": "Cook"
-      }
-    ]
+    "category": "Fashion",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "623.16"
   },
   {
-    "firstname": "Sandra",
-    "lastname": "Riley",
-    "soldProducts": [
-      {
-        "name": "Budpak Hemorrhoid Anesthetic",
-        "price": 1499.29,
-        "buyerFirstName": "Doris",
-        "buyerLastName": "Cook"
-      },
-      {
-        "name": "LV-FX",
-        "price": 820.87,
-        "buyerFirstName": "Brenda",
-        "buyerLastName": "Howell"
-      },
-      {
-        "name": "Levothyroxine Sodium",
-        "price": 885.86,
-        "buyerFirstName": "Kathy",
-        "buyerLastName": "Gilbert"
-      }
-    ]
+    "category": "Fashion",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1091.38"
   },
   {
-    "firstname": "Jonathan",
-    "lastname": "Rodriguez",
-    "soldProducts": [
-      {
-        "name": "equaline",
-        "price": 520.45,
-        "buyerFirstName": "Billy",
-        "buyerLastName": "Parker"
-      },
-      {
-        "name": "Acetic Acid",
-        "price": 1060.43,
-        "buyerFirstName": "Carl",
-        "buyerLastName": "Lawson"
-      },
-      {
-        "name": "Prednisone",
-        "price": 550.72,
-        "buyerFirstName": null,
-        "buyerLastName": "Stewart"
-      }
-    ]
+    "category": "Fashion",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1187.27"
   },
   {
-    "firstname": null,
-    "lastname": "Schmidt",
-    "soldProducts": [
-      {
-        "name": "Etoposide",
-        "price": 1483.96,
-        "buyerFirstName": "Ann",
-        "buyerLastName": "Stevens"
-      },
-      {
-        "name": "Allopurinol",
-        "price": 336.81,
-        "buyerFirstName": "Emily",
-        "buyerLastName": "Parker"
-      },
-      {
-        "name": "Smooth texture Orange flavor",
-        "price": 976.65,
-        "buyerFirstName": "Jeremy",
-        "buyerLastName": "Woods"
-      },
-      {
-        "name": "ISOPROPYL ALCOHOL",
-        "price": 339.48,
-        "buyerFirstName": "Betty",
-        "buyerLastName": "Ward"
-      }
-    ]
+    "category": "Fashion",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1374.01"
   },
   {
-    "firstname": "Thomas",
-    "lastname": "Snyder",
-    "soldProducts": [
-      {
-        "name": "DIPYRIDAMOLE",
-        "price": 1150.67,
-        "buyerFirstName": "Eugene",
-        "buyerLastName": "Stewart"
-      },
-      {
-        "name": "Warfarin Sodium",
-        "price": 770.05,
-        "buyerFirstName": "Patricia",
-        "buyerLastName": "Cooper"
-      },
-      {
-        "name": "SNORING HP",
-        "price": 53.59,
-        "buyerFirstName": "Fred",
-        "buyerLastName": "Allen"
-      },
-      {
-        "name": "AVANDAMET",
-        "price": 632.08,
-        "buyerFirstName": "Nicole",
-        "buyerLastName": "Harris"
-      },
-      {
-        "name": "Phenylephrine HCl",
-        "price": 459.89,
-        "buyerFirstName": "Nicole",
-        "buyerLastName": "Martinez"
-      }
-    ]
+    "category": "Fashion",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "555.12"
   },
   {
-    "firstname": "Ann",
-    "lastname": "Stevens",
-    "soldProducts": [
-      {
-        "name": "Fluoxetine",
-        "price": 385.37,
-        "buyerFirstName": null,
-        "buyerLastName": "Stewart"
-      },
-      {
-        "name": "Peter Island Continous sunscreen kids",
-        "price": 471.30,
-        "buyerFirstName": null,
-        "buyerLastName": "Bennett"
-      },
-      {
-        "name": "Extra Strength Pain Reliever PM",
-        "price": 542.72,
-        "buyerFirstName": "Sarah",
-        "buyerLastName": "Day"
-      },
-      {
-        "name": "CARBIDOPA AND LEVODOPA",
-        "price": 441.64,
-        "buyerFirstName": "Billy",
-        "buyerLastName": "Parker"
-      }
-    ]
+    "category": "Fashion",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "471.30"
   },
   {
-    "firstname": "Gary",
-    "lastname": "Stevens",
-    "soldProducts": [
-      {
-        "name": "Fosphenytoin Sodium",
-        "price": 1334.06,
-        "buyerFirstName": "Marie",
-        "buyerLastName": "Williamson"
-      },
-      {
-        "name": "Cefadroxil",
-        "price": 1302.20,
-        "buyerFirstName": null,
-        "buyerLastName": "Stewart"
-      }
-    ]
+    "category": "Fashion",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "968.59"
   },
   {
-    "firstname": null,
-    "lastname": "Stewart",
-    "soldProducts": [
-      {
-        "name": "AIR",
-        "price": 581.69,
-        "buyerFirstName": "Thomas",
-        "buyerLastName": "Snyder"
-      }
-    ]
+    "category": "Fashion",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "616.19"
   },
   {
-    "firstname": "Eugene",
-    "lastname": "Stewart",
-    "soldProducts": [
-      {
-        "name": "Retin-A MICRO",
-        "price": 995.98,
-        "buyerFirstName": "Emily",
-        "buyerLastName": "Parker"
-      },
-      {
-        "name": "Topex",
-        "price": 1258.49,
-        "buyerFirstName": "Paula",
-        "buyerLastName": "Hill"
-      },
-      {
-        "name": "Meloxicam",
-        "price": 809.18,
-        "buyerFirstName": "Chris",
-        "buyerLastName": "Mitchell"
-      },
-      {
-        "name": "Aspirin",
-        "price": 925.45,
-        "buyerFirstName": "Fred",
-        "buyerLastName": "Barnes"
-      }
-    ]
+    "category": "Fashion",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "384.99"
   },
   {
-    "firstname": null,
-    "lastname": "Thompson",
-    "soldProducts": [
-      {
-        "name": "Clarins Paris Skin Illusion - 114 cappuccino",
-        "price": 811.42,
-        "buyerFirstName": "Jeremy",
-        "buyerLastName": "Woods"
-      },
-      {
-        "name": "Irbesartan and Hydrochlorothiazide",
-        "price": 308.30,
-        "buyerFirstName": "Patricia",
-        "buyerLastName": "Fuller"
-      },
-      {
-        "name": "AMARANTHUS PALMERI POLLEN",
-        "price": 623.16,
-        "buyerFirstName": "Betty",
-        "buyerLastName": "Lawson"
-      }
-    ]
+    "category": "Fashion",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1444.12"
   },
   {
-    "firstname": "Marie",
-    "lastname": "Williamson",
-    "soldProducts": [
-      {
-        "name": "PANTOPRAZOLE SODIUM",
-        "price": 293.89,
-        "buyerFirstName": "Brenda",
-        "buyerLastName": "Howell"
-      },
-      {
-        "name": "Acid Reducer",
-        "price": 1443.51,
-        "buyerFirstName": null,
-        "buyerLastName": "Moreno"
-      },
-      {
-        "name": "Care One Hemorrhoidal",
-        "price": 932.18,
-        "buyerFirstName": "Thomas",
-        "buyerLastName": "Snyder"
-      },
-      {
-        "name": "Isosorbide Mononitrate",
-        "price": 789.91,
-        "buyerFirstName": "Paula",
-        "buyerLastName": "Hill"
-      },
-      {
-        "name": "SUMATRIPTAN SUCCINATE",
-        "price": 1265.94,
-        "buyerFirstName": "Sarah",
-        "buyerLastName": "Day"
-      }
-    ]
+    "category": "Fashion",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1471.43"
   },
   {
-    "firstname": "Jeremy",
-    "lastname": "Woods",
-    "soldProducts": [
-      {
-        "name": "TERSI",
-        "price": 554.91,
-        "buyerFirstName": "Eugene",
-        "buyerLastName": "Stewart"
-      },
-      {
-        "name": "Archangelica Eucalyptus",
-        "price": 1334.91,
-        "buyerFirstName": "Jacqueline",
-        "buyerLastName": "Perez"
-      },
-      {
-        "name": "Parsley",
-        "price": 519.06,
-        "buyerFirstName": "Betty",
-        "buyerLastName": "Lawson"
-      },
-      {
-        "name": "XtraCare Foam Antibacterial Hand Wash",
-        "price": 1251.97,
-        "buyerFirstName": "Anna",
-        "buyerLastName": "Clark"
-      }
-    ]
+    "category": "Fashion",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1135.43"
+  },
+  {
+    "category": "Fashion",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1010.98"
+  },
+  {
+    "category": "Fashion",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "849.93"
+  },
+  {
+    "category": "Fashion",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "581.69"
+  },
+  {
+    "category": "Fashion",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "632.08"
+  },
+  {
+    "category": "Business",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1468.11"
+  },
+  {
+    "category": "Autoparts",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1088.04"
+  },
+  {
+    "category": "Business",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "578.77"
+  },
+  {
+    "category": "Autoparts",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "466.70"
+  },
+  {
+    "category": "Business",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "441.64"
+  },
+  {
+    "category": "Autoparts",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "807.22"
+  },
+  {
+    "category": "Business",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "192.07"
+  },
+  {
+    "category": "Business",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1249.76"
+  },
+  {
+    "category": "Autoparts",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "306.56"
+  },
+  {
+    "category": "Business",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "967.08"
+  },
+  {
+    "category": "Autoparts",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1443.13"
+  },
+  {
+    "category": "Business",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "628.66"
+  },
+  {
+    "category": "Autoparts",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1085.78"
+  },
+  {
+    "category": "Business",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1231.42"
+  },
+  {
+    "category": "Business",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1416.59"
+  },
+  {
+    "category": "Business",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "426.91"
+  },
+  {
+    "category": "Autoparts",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1486.07"
+  },
+  {
+    "category": "Autoparts",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "41.97"
+  },
+  {
+    "category": "Business",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1251.97"
+  },
+  {
+    "category": "Autoparts",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1019.28"
+  },
+  {
+    "category": "Autoparts",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "811.42"
+  },
+  {
+    "category": "Business",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "286.43"
+  },
+  {
+    "category": "Autoparts",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "95.10"
+  },
+  {
+    "category": "Business",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1242.92"
+  },
+  {
+    "category": "Autoparts",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "53.59"
+  },
+  {
+    "category": "Business",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "266.44"
+  },
+  {
+    "category": "Autoparts",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "770.05"
+  },
+  {
+    "category": "Autoparts",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "99.74"
+  },
+  {
+    "category": "Business",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "621.78"
+  },
+  {
+    "category": "Autoparts",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "79.94"
+  },
+  {
+    "category": "Business",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1482.68"
+  },
+  {
+    "category": "Business",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "895.65"
+  },
+  {
+    "category": "Autoparts",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1301.28"
+  },
+  {
+    "category": "Autoparts",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "218.14"
+  },
+  {
+    "category": "Other",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "855.39"
+  },
+  {
+    "category": "Other",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "109.32"
+  },
+  {
+    "category": "Other",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "885.86"
+  },
+  {
+    "category": "Other",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "710.60"
+  },
+  {
+    "category": "Other",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "554.91"
+  },
+  {
+    "category": "Other",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "650.97"
+  },
+  {
+    "category": "Other",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "550.72"
+  },
+  {
+    "category": "Other",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "137.16"
+  },
+  {
+    "category": "Other",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "339.48"
+  },
+  {
+    "category": "Other",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "925.45"
+  },
+  {
+    "category": "Other",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "995.98"
+  },
+  {
+    "category": "Other",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1293.09"
+  },
+  {
+    "category": "Other",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1179.79"
+  },
+  {
+    "category": "Other",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "336.81"
+  },
+  {
+    "category": "Other",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1309.72"
+  },
+  {
+    "category": "Other",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1374.72"
+  },
+  {
+    "category": "Other",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "879.37"
+  },
+  {
+    "category": "Other",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1302.20"
+  },
+  {
+    "category": "Other",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "594.79"
+  },
+  {
+    "category": "Weapons",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1046.46"
+  },
+  {
+    "category": "Drugs",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1165.75"
+  },
+  {
+    "category": "Weapons",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1077.37"
+  },
+  {
+    "category": "Weapons",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1181.06"
+  },
+  {
+    "category": "Weapons",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1394.24"
+  },
+  {
+    "category": "Weapons",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "613.65"
+  },
+  {
+    "category": "Weapons",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "308.30"
+  },
+  {
+    "category": "Weapons",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "824.68"
+  },
+  {
+    "category": "Adult",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "666.58"
+  },
+  {
+    "category": "Adult",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1265.94"
+  },
+  {
+    "category": "Weapons",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "809.18"
+  },
+  {
+    "category": "Adult",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "658.54"
+  },
+  {
+    "category": "Drugs",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "64.88"
+  },
+  {
+    "category": "Adult",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1334.91"
+  },
+  {
+    "category": "Weapons",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1436.07"
+  },
+  {
+    "category": "Adult",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "782.77"
+  },
+  {
+    "category": "Adult",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "813.87"
+  },
+  {
+    "category": "Adult",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "938.23"
+  },
+  {
+    "category": "Adult",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1153.54"
+  },
+  {
+    "category": "Drugs",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "546.95"
+  },
+  {
+    "category": "Drugs",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "331.53"
+  },
+  {
+    "category": "Drugs",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1466.47"
+  },
+  {
+    "category": "Adult",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1453.96"
+  },
+  {
+    "category": "Drugs",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1150.67"
+  },
+  {
+    "category": "Adult",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "324.66"
+  },
+  {
+    "category": "Drugs",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1010.81"
+  },
+  {
+    "category": "Adult",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "179.28"
+  },
+  {
+    "category": "Drugs",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1356.22"
+  },
+  {
+    "category": "Weapons",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "700.92"
+  },
+  {
+    "category": "Adult",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "436.38"
+  },
+  {
+    "category": "Drugs",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "850.52"
+  },
+  {
+    "category": "Drugs",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "624.72"
+  },
+  {
+    "category": "Weapons",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "518.50"
+  },
+  {
+    "category": "Weapons",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "561.68"
+  },
+  {
+    "category": "Adult",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "421.24"
+  },
+  {
+    "category": "Weapons",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "926.64"
+  },
+  {
+    "category": "Drugs",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "95.49"
+  },
+  {
+    "category": "Weapons",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1101.77"
+  },
+  {
+    "category": "Drugs",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1305.41"
+  },
+  {
+    "category": "Adult",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "117.84"
+  },
+  {
+    "category": "Drugs",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1151.37"
+  },
+  {
+    "category": "Weapons",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "614.14"
+  },
+  {
+    "category": "Drugs",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1228.84"
+  },
+  {
+    "category": "Adult",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "516.48"
+  },
+  {
+    "category": "Drugs",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "122.57"
+  },
+  {
+    "category": "Weapons",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1033.42"
+  },
+  {
+    "category": "Drugs",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "976.15"
+  },
+  {
+    "category": "Drugs",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "953.60"
+  },
+  {
+    "category": "Adult",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1454.77"
+  },
+  {
+    "category": "Weapons",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "861.42"
+  },
+  {
+    "category": "Adult",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "108.95"
+  },
+  {
+    "category": "Adult",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "293.33"
+  },
+  {
+    "category": "Weapons",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1397.57"
+  },
+  {
+    "category": "Drugs",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "59.53"
+  },
+  {
+    "category": "Weapons",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1483.96"
+  },
+  {
+    "category": "Adult",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1097.60"
+  },
+  {
+    "category": "Drugs",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "904.52"
+  },
+  {
+    "category": "Drugs",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1060.43"
+  },
+  {
+    "category": "Adult",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1054.37"
+  },
+  {
+    "category": "Weapons",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1069.43"
+  },
+  {
+    "category": "Weapons",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "953.99"
+  },
+  {
+    "category": "Adult",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "312.85"
+  },
+  {
+    "category": "Adult",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "110.93"
+  },
+  {
+    "category": "Drugs",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "342.86"
+  },
+  {
+    "category": "Drugs",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1258.49"
+  },
+  {
+    "category": "Weapons",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "686.66"
+  },
+  {
+    "category": "Garden",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "820.87"
+  },
+  {
+    "category": "Garden",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "585.93"
+  },
+  {
+    "category": "Garden",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "73.07"
+  },
+  {
+    "category": "Garden",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "209.57"
+  },
+  {
+    "category": "Garden",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "37.97"
+  },
+  {
+    "category": "Garden",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1099.59"
+  },
+  {
+    "category": "Garden",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "933.69"
+  },
+  {
+    "category": "Garden",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "720.08"
+  },
+  {
+    "category": "Garden",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "742.47"
+  },
+  {
+    "category": "Garden",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1379.79"
+  },
+  {
+    "category": "Garden",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1162.34"
+  },
+  {
+    "category": "Garden",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "648.69"
+  },
+  {
+    "category": "Garden",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "608.18"
+  },
+  {
+    "category": "Garden",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1305.96"
+  },
+  {
+    "category": "Garden",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "716.05"
+  },
+  {
+    "category": "Garden",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "206.06"
+  },
+  {
+    "category": "Garden",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "298.53"
+  },
+  {
+    "category": "Garden",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "873.24"
+  },
+  {
+    "category": "Garden",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "673.97"
+  },
+  {
+    "category": "Garden",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "385.37"
+  },
+  {
+    "category": "Garden",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "932.18"
+  },
+  {
+    "category": "Garden",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "570.08"
+  },
+  {
+    "category": "Garden",
+    "productsCount": 1,
+    "averagePrice": ":F2",
+    "totalRevenue": "1345.11"
   }
 ]

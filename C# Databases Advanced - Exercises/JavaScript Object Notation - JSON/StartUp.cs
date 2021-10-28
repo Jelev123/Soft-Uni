@@ -5,6 +5,7 @@ using System.Linq;
 using Newtonsoft.Json;
 using ProductShop.Data;
 using ProductShop.Models;
+using Remotion.Linq.Clauses.ResultOperators;
 
 namespace ProductShop
 {
@@ -31,10 +32,11 @@ namespace ProductShop
                 Directory.CreateDirectory(ResultDirectortyPath);
             }
 
-            string result = GetSoldProducts(db);
+            string result = GetCategoriesByProductsCount(db);
 
 
-            File.WriteAllText(ResultDirectortyPath + "/users-sold-products.json", result);
+            File.WriteAllText(ResultDirectortyPath + "/categories-by-products.json", result);
+
 
             Console.WriteLine(result);
         }
@@ -150,6 +152,27 @@ namespace ProductShop
             return json;
 
 
+        }
+
+        // 07. Export Categories By Products Count
+
+        public static string GetCategoriesByProductsCount(ProductShopContext context)
+        {
+            var categories = context.Categories
+                .Select(s => new
+                {
+                    category = s.Name,
+                    productsCount = s.CategoryProducts.Count(),
+                    averagePrice = s.CategoryProducts.Average(p => p.Product.Price).ToString("f2"),
+                    totalRevenue = s.CategoryProducts.Sum(c => c.Product.Price).ToString("f2")
+                })
+                .OrderByDescending(s => s.productsCount)
+                .ToArray();
+                
+
+            string json = JsonConvert.SerializeObject(categories, Formatting.Indented);
+
+            return json;
         }
     }
 }
