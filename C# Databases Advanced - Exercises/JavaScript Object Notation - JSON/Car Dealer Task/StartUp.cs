@@ -12,19 +12,22 @@ namespace CarDealer
 {
     public class StartUp
     {
-
+        private static  string DirectoryPath = "../../../Datasets/ Results";
 
         public static void Main(string[] args)
         {
             CarDealerContext db = new CarDealerContext();
 
-            var json = File.ReadAllText("../../../Datasets/suppliers.json");
+            if (!Directory.Exists(DirectoryPath))
+            {
+                Directory.CreateDirectory(DirectoryPath);
+            }
 
-            string result = ImportSuppliers(db, json);
+            string result = GetCarsFromMakeToyota(db);
+            File.WriteAllText(DirectoryPath + "toyota-cars.json",result);
 
             Console.WriteLine(result);
-
-
+            
         }
 
 
@@ -52,7 +55,7 @@ namespace CarDealer
             var parts = JsonConvert.DeserializeObject<Part[]>(inputJson)
                 .Where(s=>s.SupplierId != null).ToArray();
 
-            context.Parts.AddRange();
+            context.Parts.AddRange(parts);
             context.SaveChanges();
 
             return $"Successfully imported {parts.Length}.";
@@ -68,7 +71,7 @@ namespace CarDealer
         {
             var cars = JsonConvert.DeserializeObject<Car[]>(inputJson);
 
-            context.Cars.AddRange();
+            context.Cars.AddRange(cars);
             context.SaveChanges();
 
             return $"Successfully imported {cars.Length}.";
@@ -82,7 +85,7 @@ namespace CarDealer
 
             var costumers = JsonConvert.DeserializeObject<Customer[]>(inputJson);
 
-            context.Customers.AddRange();
+            context.Customers.AddRange(costumers);
             context.SaveChanges();
 
             
@@ -104,6 +107,33 @@ namespace CarDealer
             return $"Successfully imported {sales.Length}.";
 
         }
+
+
+
+        //  15. Export Cars From Make Toyota
+
+        public static string GetCarsFromMakeToyota(CarDealerContext context)
+        {
+            var cars = context.Cars
+                .Where(s => s.Make == "Toyota")
+                .Select(s => new
+                {
+                    Id = s.Id,
+                    Make = s.Make,
+                    Model = s.Model,
+                    TravelledDistance = s.TravelledDistance
+                })
+                .OrderBy(s => s.Model)
+                .ThenByDescending(s => s.TravelledDistance).ToArray();
+
+            string json = JsonConvert.SerializeObject(cars);
+
+            return json;
+        }
+
+
+
+
     }
 
 
