@@ -16,11 +16,12 @@ namespace ProductShop
         {
             ProductShopContext db = new ProductShopContext();
 
-            var xml = File.ReadAllText("../../../Datasets/users.xml");
+            var xmlFile = File.ReadAllText("../../../Datasets/products.xml");
 
-            var result = ImportUsers(db, xml);
+            var result = ImportProducts(db, xmlFile);
 
             Console.WriteLine(result);
+
 
         }
 
@@ -48,6 +49,30 @@ namespace ProductShop
         }
 
 
+
+        // 02. Import Products
+
+        public static string ImportProducts(ProductShopContext context, string inputXml)
+        {
+            var rootElement = "Products";
+
+            var resulXml = XMLConverter.XmlConverter.Deserializer<ImportProductsDTO>(inputXml, rootElement);
+
+            var products = resulXml
+                .Select(x => new Product
+                {
+                    Name = x.Name,
+                    Price = x.Price,
+                    SellerId = x.SellerId,
+                    BuyerId = x.BuyerId
+                }).ToArray();
+
+            context.Products.AddRange(products);
+            context.SaveChanges();
+
+            return $"Successfully imported {products.Length}";
+
+        }
 
 
     }
