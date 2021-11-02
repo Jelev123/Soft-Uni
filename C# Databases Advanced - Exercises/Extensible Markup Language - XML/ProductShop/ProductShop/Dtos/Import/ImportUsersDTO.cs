@@ -6,13 +6,13 @@ using System.Xml.Serialization;
 namespace ProductShop.Dtos.Import
 {
     [XmlType("User")]
-  public  class ImportUsersDto
+    public class ImportUsersDTO
     {
-        [XmlAnyElement("firstname")]
+        [XmlElement("firstname")]
         public string FirstName { get; set; }
-        [XmlAnyElement("lastname")]
+        [XmlElement("lastname")]
         public string LastName { get; set; }
-        [XmlAnyElement("age")]
+        [XmlElement("age")]
         public int Age { get; set; }
     }
 }

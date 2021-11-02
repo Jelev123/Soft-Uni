@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
+﻿using System.IO;
 using System.Text;
 using System.Xml.Serialization;
 
 namespace ProductShop.XMLHelper
 {
-   public class XMLConverter
+    public class XMLConverter
     {
-
-        
+         
 
     public static class XmlConverter
     {
