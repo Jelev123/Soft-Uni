@@ -39,6 +39,8 @@ namespace ProductShop
 
 
             Console.WriteLine(result);
+            Console.WriteLine(result);
+
         }
 
 

@@ -24,7 +24,7 @@
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer(@"Server=Madness\SQLEXPRESS;Database=ProductShop;Integrated Security=True");
+                optionsBuilder.UseSqlServer(@"Server=DESKTOP-G2IKUTI\SQLEXPRESS;Database=ProductShop;Integrated Security=True");
             }
         }
 
