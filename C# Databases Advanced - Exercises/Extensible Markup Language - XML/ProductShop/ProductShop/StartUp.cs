@@ -7,6 +7,7 @@ using System.Xml.Schema;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore.Query.Internal;
 using ProductShop.Data;
+using ProductShop.Dtos.Export;
 using ProductShop.Dtos.Import;
 using ProductShop.Models;
 using ProductShop.XMLHelper;
@@ -19,13 +20,10 @@ namespace ProductShop
         {
             ProductShopContext db = new ProductShopContext();
 
-            
+            var result = GetSoldProducts(db);
+           File.WriteAllText("../../../Result/users-sold-products.xml", result);
 
-            var result = GetProductsInRange(db);
-           File.WriteAllText("../../../Result/products-in-range.xml" , result);
-
-           
-
+           Console.WriteLine(result);
 
         }
 
@@ -131,6 +129,37 @@ namespace ProductShop
             return xmlResult;
         }
 
+
+        // 06. Export Sold Products
+
+
+        public static string GetSoldProducts(ProductShopContext context)
+        {
+            var rootAtribute = "Users";
+
+            var products = context.Users
+                .Where(s => s.ProductsSold.Any() )
+                .Select(s => new ExportSoldUsersDTo
+                {
+                    FirstName = s.FirstName,
+                    LastName = s.LastName,
+                    soldProducts = s.ProductsSold.Select(d => new ExportSoldUsersProduct
+                        {
+                            Name = d.Name,
+                            Price = d.Price,
+                        })
+                        .ToArray()
+                })
+                .OrderBy(a => a.LastName)
+                .ThenBy(r => r.FirstName)
+                .Take(5)
+                .ToArray();
+
+            ;
+                    var xmlResult = XMLConverter.XmlConverter.Serialize(products, rootAtribute);
+
+            return xmlResult;
+        }
 
     }
 }

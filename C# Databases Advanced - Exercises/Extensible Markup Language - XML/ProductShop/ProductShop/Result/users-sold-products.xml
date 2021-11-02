@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-16"?>
+<Users>
+  <User>
+    <soldProducts>
+      <name>Meloxicam</name>
+      <price>809.18</price>
+    </soldProducts>
+    <soldProducts>
+      <name>Goats Milk</name>
+      <price>298.53</price>
+    </soldProducts>
+    <soldProducts>
+      <name>Aspirin</name>
+      <price>925.45</price>
+    </soldProducts>
+    <soldProducts>
+      <name>Retin-A MICRO</name>
+      <price>995.98</price>
+    </soldProducts>
+    <soldProducts>
+      <name>Topex</name>
+      <price>1258.49</price>
+    </soldProducts>
+  </User>
+  <User>
+    <soldProducts>
+      <name>IOPE SUPER VITAL</name>
+      <price>824.68</price>
+    </soldProducts>
+    <soldProducts>
+      <name>Triamterene and Hydrochlorothiazide</name>
+      <price>1416.59</price>
+    </soldProducts>
+  </User>
+  <User>
+    <soldProducts>
+      <name>Allopurinol</name>
+      <price>48.80</price>
+    </soldProducts>
+    <soldProducts>
+      <name>Eszopiclone</name>
+      <price>405.03</price>
+    </soldProducts>
+  </User>
+  <User>
+    <soldProducts>
+      <name>CVS Therapeutic Menthol Pain Reliever</name>
+      <price>1033.42</price>
+    </soldProducts>
+    <soldProducts>
+      <name>Cold and Cough</name>
+      <price>218.14</price>
+    </soldProducts>
+    <soldProducts>
+      <name>Glipizide</name>
+      <price>621.78</price>
+    </soldProducts>
+  </User>
+  <User>
+    <soldProducts>
+      <name>Ibuprofen</name>
+      <price>1305.96</price>
+    </soldProducts>
+    <soldProducts>
+      <name>No7 Protect and Perfect Foundation Sunscreen Broad Spectrum SPF 15 Cool Ivory</name>
+      <price>616.19</price>
+    </soldProducts>
+    <soldProducts>
+      <name>CHAMOMILLA</name>
+      <price>37.97</price>
+    </soldProducts>
+    <soldProducts>
+      <name>Benazepril Hydrochloride and Hydrochlorothiazide</name>
+      <price>1187.27</price>
+    </soldProducts>
+  </User>
+</Users>
