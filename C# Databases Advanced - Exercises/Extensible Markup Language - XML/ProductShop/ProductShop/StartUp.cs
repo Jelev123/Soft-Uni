@@ -19,11 +19,12 @@ namespace ProductShop
         {
             ProductShopContext db = new ProductShopContext();
 
-            var xmlFile = File.ReadAllText("../../../Datasets/categories.xml");
+            
 
-            var result = ImportCategories(db, xmlFile);
+            var result = GetProductsInRange(db);
+           File.WriteAllText("../../../Result/products-in-range.xml" , result);
 
-            Console.WriteLine(result);
+           
 
 
         }
@@ -104,6 +105,30 @@ namespace ProductShop
             return $"Successfully imported {categories.Length}";
 
 
+        }
+
+
+        // 05. Export Products In Range
+
+        public static string GetProductsInRange(ProductShopContext context)
+        {
+
+            var rootAtribute = "Products";
+            var products = context.Products
+                .Where(s => s.Price >= 500 & s.Price <= 1000)
+                .Select(x => new
+                {
+                    Name = x.Name,
+                    Price = x.Price,
+                    Buyer = x.Buyer.FirstName + " " + x.Buyer.LastName
+                })
+                .OrderBy(s => s.Price)
+                .Take(10)
+                .ToList();
+
+            var xmlResult = XMLConverter.XmlConverter.Serialize(products, rootAtribute);
+
+            return xmlResult;
         }
 
 
