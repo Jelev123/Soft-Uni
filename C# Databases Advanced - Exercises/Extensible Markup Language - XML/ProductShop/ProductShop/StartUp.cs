@@ -19,9 +19,9 @@ namespace ProductShop
         {
             ProductShopContext db = new ProductShopContext();
 
-            var xmlFile = File.ReadAllText("../../../Datasets/products.xml");
+            var xmlFile = File.ReadAllText("../../../Datasets/categories.xml");
 
-            var result = ImportProducts(db, xmlFile);
+            var result = ImportCategories(db, xmlFile);
 
             Console.WriteLine(result);
 
@@ -85,18 +85,18 @@ namespace ProductShop
 
         public static string ImportCategories(ProductShopContext context, string inputXml)
         {
-            var rootElement = "Ctegories";
+            var rootElement = "Categories";
 
 
-            var resultXml = XMLConverter.XmlConverter.Deserializer<CategoriesDTO>(inputXml, rootElement);
+            var resultXml =XMLConverter.XmlConverter.Deserializer<CategoriesDTO>(inputXml, rootElement);
 
 
-         
-            var categories = resultXml
-                .Select(s => new Category
+            var categories = resultXml.Where(s => s.Name != null)
+                .Select(s=> new Category
                 {
                     Name = s.Name
-                }).ToArray();
+                })
+                .ToArray();
 
             context.Categories.AddRange(categories);
             context.SaveChanges();
