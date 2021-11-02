@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Xml;
+using System.Xml.Schema;
 using AutoMapper;
+using Microsoft.EntityFrameworkCore.Query.Internal;
 using ProductShop.Data;
 using ProductShop.Dtos.Import;
 using ProductShop.Models;
@@ -71,6 +74,35 @@ namespace ProductShop
             context.SaveChanges();
 
             return $"Successfully imported {products.Length}";
+
+        }
+
+
+
+        // 03. Import Categories
+
+
+
+        public static string ImportCategories(ProductShopContext context, string inputXml)
+        {
+            var rootElement = "Ctegories";
+
+
+            var resultXml = XMLConverter.XmlConverter.Deserializer<CategoriesDTO>(inputXml, rootElement);
+
+
+         
+            var categories = resultXml
+                .Select(s => new Category
+                {
+                    Name = s.Name
+                }).ToArray();
+
+            context.Categories.AddRange(categories);
+            context.SaveChanges();
+
+            return $"Successfully imported {categories.Length}";
+
 
         }
 

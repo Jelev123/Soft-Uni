@@ -17,7 +17,7 @@ namespace ProductShop.Dtos.Import
         public int SellerId { get; set; }
 
         [XmlElement("buyerId")]
-        public int BuyerId { get; set; }
+        public int? BuyerId { get; set; }
 
     }
 
