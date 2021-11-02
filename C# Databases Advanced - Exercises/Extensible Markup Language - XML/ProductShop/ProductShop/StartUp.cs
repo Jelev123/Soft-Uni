@@ -11,6 +11,7 @@ using ProductShop.Dtos.Export;
 using ProductShop.Dtos.Import;
 using ProductShop.Models;
 using ProductShop.XMLHelper;
+using Remotion.Linq.Parsing.Structure.IntermediateModel;
 
 namespace ProductShop
 {
@@ -20,8 +21,8 @@ namespace ProductShop
         {
             ProductShopContext db = new ProductShopContext();
 
-            var result = GetSoldProducts(db);
-           File.WriteAllText("../../../Result/users-sold-products.xml", result);
+            var result = GetCategoriesByProductsCount(db);
+           File.WriteAllText("../../../Result/categories-by-products.xml", result);
 
            Console.WriteLine(result);
 
@@ -159,6 +160,31 @@ namespace ProductShop
                     var xmlResult = XMLConverter.XmlConverter.Serialize(products, rootAtribute);
 
             return xmlResult;
+        }
+
+        // 07. Export Categories By Products Count
+
+        public static string GetCategoriesByProductsCount(ProductShopContext context)
+        {
+            var rootAtribute = "Categories";
+
+
+            var productsCount = context.Categories
+                .Select(s => new CategoriesByProductsCountDTO
+                {
+                    Name = s.Name,
+                    Count = s.CategoryProducts.Count,
+                    AveragePrice = s.CategoryProducts.Average(s=>s.Product.Price),
+                    TotalRevenue = s.CategoryProducts.Sum(s=>s.Product.Price)
+                })
+                .OrderByDescending(s => s.Count)
+                .ThenBy(s => s.TotalRevenue)
+                .ToArray();
+
+            var xmlResult = XMLConverter.XmlConverter.Serialize(productsCount, rootAtribute);
+
+            return xmlResult;
+
         }
 
     }
