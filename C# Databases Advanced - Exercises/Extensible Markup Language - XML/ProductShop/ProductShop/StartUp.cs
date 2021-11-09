@@ -21,10 +21,10 @@ namespace ProductShop
         {
             ProductShopContext db = new ProductShopContext();
 
-            var result = GetCategoriesByProductsCount(db);
-           File.WriteAllText("../../../Result/categories-by-products.xml", result);
+            var result = GetUsersWithProducts(db);
+            File.WriteAllText("../../../Result/users-and-products.xml", result);
 
-           Console.WriteLine(result);
+            Console.WriteLine(result);
 
         }
 
@@ -88,11 +88,11 @@ namespace ProductShop
             var rootElement = "Categories";
 
 
-            var resultXml =XMLConverter.XmlConverter.Deserializer<CategoriesDTO>(inputXml, rootElement);
+            var resultXml = XMLConverter.XmlConverter.Deserializer<CategoriesDTO>(inputXml, rootElement);
 
 
             var categories = resultXml.Where(s => s.Name != null)
-                .Select(s=> new Category
+                .Select(s => new Category
                 {
                     Name = s.Name
                 })
@@ -139,16 +139,16 @@ namespace ProductShop
             var rootAtribute = "Users";
 
             var products = context.Users
-                .Where(s => s.ProductsSold.Any() )
+                .Where(s => s.ProductsSold.Any())
                 .Select(s => new ExportSoldUsersDTo
                 {
                     FirstName = s.FirstName,
                     LastName = s.LastName,
                     soldProducts = s.ProductsSold.Select(d => new ExportSoldUsersProduct
-                        {
-                            Name = d.Name,
-                            Price = d.Price,
-                        })
+                    {
+                        Name = d.Name,
+                        Price = d.Price,
+                    })
                         .ToArray()
                 })
                 .OrderBy(a => a.LastName)
@@ -157,7 +157,7 @@ namespace ProductShop
                 .ToArray();
 
             ;
-                    var xmlResult = XMLConverter.XmlConverter.Serialize(products, rootAtribute);
+            var xmlResult = XMLConverter.XmlConverter.Serialize(products, rootAtribute);
 
             return xmlResult;
         }
@@ -174,8 +174,8 @@ namespace ProductShop
                 {
                     Name = s.Name,
                     Count = s.CategoryProducts.Count,
-                    AveragePrice = s.CategoryProducts.Average(s=>s.Product.Price),
-                    TotalRevenue = s.CategoryProducts.Sum(s=>s.Product.Price)
+                    AveragePrice = s.CategoryProducts.Average(s => s.Product.Price),
+                    TotalRevenue = s.CategoryProducts.Sum(s => s.Product.Price)
                 })
                 .OrderByDescending(s => s.Count)
                 .ThenBy(s => s.TotalRevenue)
@@ -185,6 +185,45 @@ namespace ProductShop
 
             return xmlResult;
 
+        }
+
+
+        // 08. Export Users and Products
+
+        public static string GetUsersWithProducts(ProductShopContext context)
+        {
+            var usersProducts = context.Users
+                .Where(s => s.ProductsSold.Any())
+                .Select(a => new Users
+                {
+                    FirstName = a.FirstName,
+                    LastName = a.LastName,
+                    Age = a.Age,
+                    SolidProducts = new SolidProducts
+                    {
+                        Count = a.ProductsSold.Count,
+                        Products = a.ProductsSold.Select(a => new Products
+                        {
+                            Name = a.Name,
+                            Price = a.Price
+                        }).OrderByDescending(s=>s.Price)
+                            .ToArray()
+                    }
+                })
+                .OrderByDescending(s => s.SolidProducts.Count)
+                .Take(10)
+                .ToArray();
+
+
+            var users = new ExportUsersAndProductsDTO
+            {
+                Count = usersProducts.Length,
+                Users = usersProducts
+            };
+
+            var xmlResult = XMLConverter.XmlConverter.Serialize( users,"Users");
+
+            return xmlResult;
         }
 
     }
